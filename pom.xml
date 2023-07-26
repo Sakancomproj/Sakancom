@@ -3,9 +3,10 @@
   <groupId>Sakancom</groupId>
   <artifactId>SakancomProject</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
   <dependencies>
   
-  <dependency>
+<dependency>
 <groupId>io.cucumber</groupId>
 <artifactId>cucumber-picocontainer</artifactId>
 <version>7.3.4</version>
@@ -31,5 +32,21 @@
 <scope>test</scope>
 </dependency>
 
+<dependency>
+<groupId>com.sun.mail</groupId>
+<artifactId>javax.mail</artifactId>
+<version>1.6.2</version>
+</dependency>
+
+	<dependency>
+		<groupId>org.projectlombok</groupId>
+		<artifactId>lombok</artifactId>
+		<version>1.18.28</version>
+		<scope>provided</scope>
+	</dependency>
+
+
   </dependencies>
+  
+  
 </project>
