@@ -7,7 +7,6 @@ import javax.swing.JOptionPane;
 
 import jana.Admin;
 import jana.Database;
-import jana.Email;
 //import jana.Main;
 import jana.Order;
 //import jana.REPORT;
