@@ -87,11 +87,11 @@ List <String> pass=new ArrayList <String>();
 			dbitem.add(obj4);
 
 			 
-			obj5.category="callten";
-			obj5.name="curtains saxony";
+			obj5.category="Furniture";
+			obj5.name="bed";
 			obj5.picture="c3";
 			obj5.sn="3";
-			obj5.description="fabric";
+			obj5.description="single";
 			obj5.price=10;
 			
 			dbitem.add(obj5);
