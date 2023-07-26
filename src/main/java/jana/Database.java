@@ -25,9 +25,7 @@ List <String> pass=new ArrayList <String>();
 	 Order obj7=new Order();
 	 
 	 int equ=0;
-	/* WORK obj8=new WORK();
-	 WORK obj9=new WORK();
-	 WORK obj10=new WORK();*/
+	
 	 User obj51=new User();
 	 Order obj71=new Order();
 	 
@@ -124,44 +122,6 @@ List <String> pass=new ArrayList <String>();
 			obj7.nameworker="salehaqad";
 			dborder.add(obj7);
 			
-		/*	obj8.address="jenen";
-			obj8.email="farah@gmail.com";
-			obj8.id="4";
-			obj8.password=pass.get(2);
-			obj8.phone="056928521";
-			obj8.name="farahjabe";
-			obj8.balance="0";
-			obj8.wageforhoure="50";
-			obj8.workhouers="0";
-			obj8.available=false;
-			
-			dbworker.add(obj8);
-		
-			obj9.address="nablus";
-			obj9.email="saleh@gmail.com";
-			obj9.id="5";
-			obj9.password=pass.get(3);
-			obj9.phone="056928522";
-			obj9.name="salehshakhshir";
-			obj9.balance="2500";
-			obj9.wageforhoure="50";
-			obj9.workhouers="50";
-			obj9.available=false;
-			dbworker.add(obj9);
-			
-			
-			obj10.address="nablus";
-			obj10.email="noor@gmail.com";
-			obj10.id="6";
-			obj10.password=pass.get(4);
-			obj10.phone="056935522";
-			obj10.name="noorjabe";
-			obj10.balance="5000";
-			obj10.wageforhoure="50";
-			obj10.workhouers="100";
-			obj10.available=true;
-			dbworker.add(obj10);
-			*/
 			
 		
 			obj51.id="5";

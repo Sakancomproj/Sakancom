@@ -64,7 +64,7 @@ static void menuuser()
 	logger.info("|   press 4 if you want to delete order.                                                      | \n");
 	logger.info("|   press 5 if you want to order status request.                                              | \n");
 	logger.info("|   press 6 if you want to show specific order information.                                   | \n");
-	logger.info("|   press 7 if you want to get the invoice.                                                   | \n");
+	logger.info("|   press 7 if you want to get the bill.                                                   | \n");
 	logger.info("|   press 8 if you want to log out                                                            | \n");
 	logger.info("|   press 9 if you want to go to main page                                                    | \n");
 
@@ -81,7 +81,7 @@ static void menuadmin()
 	logger.info("|   press 6 if you want to show all orders in the company.                                    | \n");
 	logger.info("|   press 7 if you want to view unpaid orderes.                                               | \n");
 	logger.info("|   press 8 if you want to search for user.                                                   | \n");
-	logger.info("|   press 9 if you want to search for product.                                                | \n");
+	logger.info("|   press 9 if you want to search for item.                                                | \n");
 	logger.info("|   press 10 if you want to log out                                                           | \n");
 	logger.info("|   press 11 if you want to go to main page                                                   | \n");
 
@@ -624,12 +624,12 @@ account ();
 				addres=db.dbuser.get(i).address;
 			}
 		}
-		logger.info("wait for the invoice to be ready...... ");	
+		logger.info("wait for the bill to be ready...... ");	
 		JOptionPane.showMessageDialog(null,"The user name: "+ nuser+"\nThe user address: "+addres +"\n The id user:"
 		        +o.id+"\n The id order:"+o.idorder+"\n The type "
 		        +o.name+"\n The price: "+o.price+
 		         "\n The price after discount: "+o.discount+"\n The count :"
-				+o.count+" \n delvery= 15 "+"\n The total price"+o.totalprice1,"Invoice",JOptionPane.INFORMATION_MESSAGE);
+				+o.count+" \n delvery= 15 "+"\n The total price"+o.totalprice1,"Bill",JOptionPane.INFORMATION_MESSAGE);
 		
 		}
 		break;
