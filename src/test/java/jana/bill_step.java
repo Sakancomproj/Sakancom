@@ -54,6 +54,8 @@ public class bill_step {
 		assertEquals(totoal_price_act,toloal_price );
 		assertTrue(flag_pric);
 	}
+	
+	
 
 	@When("the price of the order  {string}")
 	public void thePriceOfTheOrder(String string) {
@@ -64,6 +66,8 @@ public class bill_step {
 			
 		}
 	}
+	
+	
 
 	@When("the price for delivery  {string}")
 	public void thePriceForDelivery(String string) {
@@ -74,6 +78,8 @@ public class bill_step {
 	public void theToltalPrice(String string) {
 		totoal_price_act=Integer.parseInt(string);
 	}
+	
+	
 
 	@Given("the order is in state completed or waiting")
 	public void theOrderIsInStateCompletedOrWaiting() {

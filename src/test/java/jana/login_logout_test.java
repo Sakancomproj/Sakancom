@@ -38,7 +38,7 @@ public class login_logout_test {
 
 	@Then("the admin login")
 	public void the_admin_login() {
-		 assertFalse(flag_login);
+		 assertFalse(!flag_login);
 	}
 
 	@Given("that the admin is not logged in")
@@ -66,7 +66,7 @@ public class login_logout_test {
 
 	@Then("the admin login is  Fail")
 	public void the_admin_login_is_fail() {
-		assertTrue(flag_login); 
+		assertTrue(!flag_login); 
 	}
 
 	static boolean flag_user;
@@ -127,7 +127,7 @@ public void the_user_log_in_succeeds() {
 
 @Then("the user log in fails")
 public void the_user_log_in_fails() {
-	 assertTrue(flag_user); // with !
+	 assertTrue(!flag_user); 
 
 }
 
