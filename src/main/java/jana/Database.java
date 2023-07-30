@@ -8,12 +8,15 @@ import java.util.logging.Logger;
 
 
 
+
 public class Database {
 
 List <String> pass=new ArrayList <String>();
 	 List <User> dbuser=new ArrayList <User> ();
 	 List <Order> dborder=new ArrayList <Order> ();
 	 List <Item> dbitem=new ArrayList <Item> ();
+	 List <Owner> dbowner=new ArrayList <Owner> ();
+	 List <Apartment> dbapartment=new ArrayList <Apartment> ();
 	// List <Reservation> dbrev=new ArrayList <Reservation> ();
 	 private static final Logger logger = Logger.getLogger(Database.class.getName());
 	 User obj1=new User();
@@ -23,6 +26,8 @@ List <String> pass=new ArrayList <String>();
 	 Item obj5=new Item();
 	 Order obj6=new Order();
 	 Order obj7=new Order();
+	 Apartment obj8=new Apartment();
+	 Apartment obj9=new Apartment();
 	 
 	 int equ=0;
 	
@@ -102,8 +107,8 @@ List <String> pass=new ArrayList <String>();
 			obj6.timeReceipt=0;
 			obj6.paid=false;
 			obj6.price=20;
-			obj6.nameworker="farahjabe";
-			obj6.idworker="4";
+			/*obj6.nameworker="farahjabe";
+			obj6.idworker="4";*/
 			obj6.totalprice1=35;
 			
 			dborder.add(obj6);
@@ -119,7 +124,7 @@ List <String> pass=new ArrayList <String>();
 			obj7.price=40;
 			obj7.paid=false;
 			obj7.totalprice1=55;
-			obj7.nameworker="salehaqad";
+			//obj7.nameworker="salehaqad";
 			dborder.add(obj7);
 			
 			
@@ -144,8 +149,26 @@ List <String> pass=new ArrayList <String>();
 			obj71.price=40;
 			obj71.paid=false;
 			obj71.totalprice1=40;
-			obj71.nameworker="salehshakhshir";
+			//obj71.nameworker="salehshakhshir";
 			dborder.add(obj71);
+			
+			obj8.location="Rafedia";
+			obj8.capacity="Three";
+			obj8.picture="c5";
+			obj8.sn="1";
+			obj8.description="three beds,bathroom and kitchen";
+			obj8.price=300;
+			
+			dbapartment.add(obj8);
+			
+			obj9.location="Beitwazan";
+			obj9.capacity="Two";
+			obj9.picture="c8";
+			obj9.sn="2";
+			obj9.description="two beds,bathroom and kitchen";
+			obj9.price=200;
+			
+			dbapartment.add(obj8);
 			
 		}
 
@@ -177,6 +200,25 @@ List <String> pass=new ArrayList <String>();
 
 		if (!dbitem.contains(obj16))
 				dbitem.add(obj16);
+			
+		}
+	 
+	 public  void createapartment(String location1,String capacity1,String picture1,String description1,int price1)
+		{ Apartment obj20=new Apartment();
+			
+			
+				obj20.sn=Integer.toString(1+dbapartment.size());
+
+			
+			
+			obj20.location=location1;
+			obj20.capacity=capacity1;
+			obj20.picture=picture1;
+			obj20.description=description1;
+			obj20.price=price1;
+
+		if (!dbapartment.contains(obj20))
+			dbapartment.add(obj20);
 			
 		}
 	 
@@ -436,14 +478,7 @@ List <String> pass=new ArrayList <String>();
 	    obj.paid=false;
 		
 				
-	/* for(int i=0;i<dbworker.size();i++) {
-		 if(dbworker.get(i).available) {
-			obj.idworker= dbworker.get(i).id;
-			obj.nameworker= dbworker.get(i).name;
-			 dbworker.get(i).idorder=idord;
-			 dbworker.get(i).available=false;
-		 }
-	 }*/
+	 
 			
 			
 	 	obj.lateDate=date2;
@@ -456,7 +491,41 @@ List <String> pass=new ArrayList <String>();
 			
 		
 		}
+	 
+	 
+	 public String returnid(String email,String pass) {
+			for(int i=0;i<dbowner.size();i++) {
+				
+				if(dbowner.get(i).email.equals(email)&&dbowner.get(i).password.equals(pass)) {
+					return dbowner.get(i).id;
+				}
+			}
+			
+			return null;
+		}
 		
+	 public String calcbalance(String id)
+		{
+		 String ret="";
+		
+		 for(int i=0;i<dbowner.size();i++) {
+				if( dbowner.get(i).id.equals(id) ){
+					
+					
+				int x=200;
+				dbowner.get(i).balance= Integer.toString(x);
+		        dbowner.get(i).balance=ret;
+
+				}
+				
+				
+			}
+		 
+			
+			return ret;
+				
+			}
+	 
 	public Order ret(String iduser,String idorder) {
 		for(int i=0;i<dborder.size();i++) {
 			if(dborder.get(i).id.equals(iduser)&& dborder.get(i).idorder.equals(idorder)) {
@@ -639,6 +708,18 @@ List <String> pass=new ArrayList <String>();
 			}
 				
 		}}
+		
+		public  void deleteapartment(String id) {
+			for (int i=0 ;i < dbapartment.size();i++)
+			{
+				if(dbapartment.isEmpty())break;
+				else if (dbapartment.get(i).sn.equals(id))
+			{
+					dbapartment.remove(i);
+				
+			}
+				
+		}}
 
 		public boolean encome() {
 			float en=0;
@@ -673,8 +754,7 @@ List <String> pass=new ArrayList <String>();
 				String a=""+dborder.get(i).discount;
 				String b=""+dborder.get(i).price;
 				String c=""+dborder.get(i).lateDate;
-				String d=""+dborder.get(i).timeReceipt;
-				String e=""+dborder.get(i).count;			
+				String d=""+dborder.get(i).timeReceipt;		
 				logger.info(a);
 				logger.info(" | price= ");
 				logger.info(b);
@@ -683,11 +763,28 @@ List <String> pass=new ArrayList <String>();
 				logger.info(" | days left= ");
 				logger.info(d);
 				logger.info(" | count= ");
-			
-				logger.info(e);
-				logger.info(" | name worker= ");
-				logger.info(dborder.get(i).nameworker);
 				
+				logger.info("\n");
+			}
+			return true;
+		}
+		
+		public boolean showAllApartments() {
+			for(int i=0;i<dborder.size();i++) {
+		 
+				logger.info("sn :");
+				logger.info(dbapartment.get(i).sn);
+				logger.info(" | location :");
+				logger.info(dbapartment.get(i).location);
+				logger.info(" | capacity : ");
+				logger.info (dbapartment.get(i).capacity);
+				logger.info(" | description : ");
+				logger.info (dbapartment.get(i).description);
+				logger.info(" | price : ");
+				String b=""+dbapartment.get(i).price;
+				logger.info(" | price= ");
+				logger.info(b);
+			
 				logger.info("\n");
 			}
 			return true;

@@ -9,6 +9,7 @@ import jana.Admin;
 import jana.Database;
 //import jana.Main;
 import jana.Order;
+import jana.Apartment;
 //import jana.REPORT;
 import jana.States;
 import jana.User;
@@ -29,7 +30,7 @@ public class Main {
 	  static User u=new User();
 	  static Order o=new Order();
 	  static States sta=new States ();
-	//  static WORK wok =new WORK ();
+	  static Owner own =new Owner ();
 	  
 	  static	int m;
 	  static String id1;
@@ -55,6 +56,12 @@ public class Main {
 	  static  String name ;
 	  static String picture ;
 	  static String description;
+	  static  int ch2;
+	  static int numw ;
+	  static String location ;
+	  static  String capacity;
+	  static String pic ;
+	  static String descrip;
 	 
 static void menuuser()
 { 
@@ -81,10 +88,22 @@ static void menuadmin()
 	logger.info("|   press 6 if you want to show all orders in the company.                                    | \n");
 	logger.info("|   press 7 if you want to view unpaid orderes.                                               | \n");
 	logger.info("|   press 8 if you want to search for user.                                                   | \n");
-	logger.info("|   press 9 if you want to search for item.                                                | \n");
+	logger.info("|   press 9 if you want to search for item.                                                   | \n");
 	logger.info("|   press 10 if you want to log out                                                           | \n");
 	logger.info("|   press 11 if you want to go to main page                                                   | \n");
 
+}
+
+static void menuowner()
+{
+	logger.info("|   press 1 if you want to add an apartment.                                                      | \n");
+	logger.info("|   press 2 if you want to delete your apartment from the Sakancom Application.                   | \n");
+	logger.info("|   press 3 if you want to show all your apartments.                                              | \n");
+	logger.info("|   press 4 if you want to log out                                                                | \n");
+	logger.info("|   press 5 if you want to go to main page                                                        | \n");
+
+
+	
 }
 
 
@@ -350,6 +369,7 @@ static void admin() {
 static void choice()
 {
 	logger.info("|   press 1 if you are user                                                                    | \n");
+	logger.info("*   press 2 if you are owner                                                                  * \n");
 	logger.info("|   press 3 if you are admin                                                                   | \n");
 }
 
@@ -449,9 +469,7 @@ account ();
 			continue;
 		}
 	
-		db.modifyinformation(id1, phone1, name1, email, address1, password);
-		
-		
+		db.modifyinformation(id1, phone1, name1, email, address1, password);	
 		
 	}
 		
@@ -655,8 +673,6 @@ account ();
 	
 	break;
 	
-	
-	
 		}
 		
 	break;
@@ -731,6 +747,169 @@ account ();
 	}
 }
 
+static void owner() {
+
+	   
+int cm ;
+	
+	
+	
+	Scanner s4=new Scanner(System.in);
+	while(true) {
+		
+	account2();
+		cm=s4.nextInt();
+		
+		switch(cm)
+	
+		{
+		case 1:
+		{	
+			
+			ca1();
+			break;
+		
+}
+		
+		case 2:
+		{
+			logger.info("\n Exiting the program..");
+		      return;
+		}
+		default : {
+			logger.info("the enter is wrong!.");
+		}
+			
+				
+		}
+	}
+	  
+}
+
+static void ca1() {
+	
+int owlogin = 0;
+	
+	int ownum;
+	Scanner s7=new Scanner(System.in);
+	while(true) {
+		
+	
+			logger.info("\n Your email :");
+	email=s7.next();
+	
+	logger.info("\n Your Password :");
+	password=s7.next();
+	
+	
+	owlogin=Owner.checkifexi8(email,password);
+
+	
+	
+	if (owlogin ==0)
+		logger.info("\n Your email or password is incorrect, please check it.. ");
+  else 
+  {
+  	logger.info("welcome..\n");
+  
+	
+while(true) {
+
+menuowner();
+ownum=s7.nextInt();
+
+
+
+
+switch(ownum)
+{
+
+
+case 1:
+{
+
+
+logger.info("please enter the information about your appartment:\n");
+
+logger.info("Location: ");
+location=s7.next();
+logger.info("capacity: ");
+capacity=s7.next();
+logger.info("picture: ");
+pic=s7.next();
+logger.info("description: ");
+descrip=s7.next();
+
+
+String sma="  ";
+logger.info("appartment created successfully, if you want to check it enter 1  ");
+if (s7.nextInt()==1)
+{db.createapartment(location,capacity, picture, description,10);
+for (int i=0 ;i < db.dbitem.size();i++)
+{
+logger.info(sma);
+logger.info(db.dbapartment.get(i).sn);
+	logger.info(sma);
+logger.info(db.dbapartment.get(i).capacity);
+	logger.info(sma);
+logger.info(db.dbapartment.get(i).location);
+	logger.info(sma);
+logger.info(db.dbapartment.get(i).description);
+logger.info(sma);
+logger.info(db.dbapartment.get(i).picture);
+logger.info("\n");
+}
+}
+break;
+}
+
+case 2:
+{
+logger.info("please enter the SN of your apartment\n");
+logger.info("SN\n");
+sn=s7.next();
+
+db.deleteapartment(sn);
+for (int i=0 ;i <db.dbapartment.size();i++)
+{
+
+	logger.info(db.dbapartment.get(i).sn);
+	logger.info(db.dbapartment.get(i).location);
+	logger.info(db.dbapartment.get(i).description);
+	logger.info(db.dbapartment.get(i).capacity);
+	logger.info(db.dbapartment.get(i).picture);
+	logger.info("\n");
+}
+break;
+
+}
+case 3:
+{
+	db.showAllApartments();
+}
+case 4:
+{
+break ;
+}
+
+
+case 5:
+{
+	owner();
+break ;
+}
+default :{
+logger.info("the enter is wrong!");
+}
+
+}
+
+}
+} 
+	}
+	
+}		
+
 static void test(int ch8)
 {
 	 
@@ -746,7 +925,7 @@ static void test(int ch8)
 	
 	case 2:
 	{
-	//	worker();
+		owner();
 		break;
 	}
 			
@@ -792,6 +971,5 @@ static void test(int ch8)
 		}
 		
 	}
-
 
 }

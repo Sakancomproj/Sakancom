@@ -23,8 +23,8 @@ public class Order {
 		
 			 float totalprice1;
 		
-			  String nameworker ;
-		   String idworker;
+			 /* String nameworker ;
+		   String idworker;*/
 			 boolean paid=false;
 		
 			

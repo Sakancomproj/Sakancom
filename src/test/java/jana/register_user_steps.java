@@ -98,7 +98,6 @@ public void the_user_with_id_is_already_registered(String string) {
    if(logApp) {
 	   register3=dbu.checkifexist(string);
 	   if(!register3) {ass3=true;
-	//	dbu.messageforuser1();
 	   }
    }
 }
