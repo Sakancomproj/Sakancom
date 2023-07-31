@@ -28,6 +28,7 @@ List <String> pass=new ArrayList <String>();
 	 Order obj7=new Order();
 	 Apartment obj8=new Apartment();
 	 Apartment obj9=new Apartment();
+	 Apartment obj10=new Apartment();
 	 
 	 int equ=0;
 	
@@ -107,8 +108,6 @@ List <String> pass=new ArrayList <String>();
 			obj6.timeReceipt=0;
 			obj6.paid=false;
 			obj6.price=20;
-			/*obj6.nameworker="farahjabe";
-			obj6.idworker="4";*/
 			obj6.totalprice1=35;
 			
 			dborder.add(obj6);
@@ -124,7 +123,6 @@ List <String> pass=new ArrayList <String>();
 			obj7.price=40;
 			obj7.paid=false;
 			obj7.totalprice1=55;
-			//obj7.nameworker="salehaqad";
 			dborder.add(obj7);
 			
 			
@@ -149,7 +147,6 @@ List <String> pass=new ArrayList <String>();
 			obj71.price=40;
 			obj71.paid=false;
 			obj71.totalprice1=40;
-			//obj71.nameworker="salehshakhshir";
 			dborder.add(obj71);
 			
 			obj8.location="Rafedia";
@@ -168,7 +165,16 @@ List <String> pass=new ArrayList <String>();
 			obj9.description="two beds,bathroom and kitchen";
 			obj9.price=200;
 			
-			dbapartment.add(obj8);
+			dbapartment.add(obj9);
+			
+			obj10.location="15 street";
+			obj10.capacity="Five";
+			obj10.picture="c5";
+			obj10.sn="3";
+			obj10.description=" 3 rooms,2 bathrooms and kitchen";
+			obj10.price=600;
+			
+			dbapartment.add(obj10);
 			
 		}
 
@@ -782,7 +788,6 @@ List <String> pass=new ArrayList <String>();
 				logger.info (dbapartment.get(i).description);
 				logger.info(" | price : ");
 				String b=""+dbapartment.get(i).price;
-				logger.info(" | price= ");
 				logger.info(b);
 			
 				logger.info("\n");

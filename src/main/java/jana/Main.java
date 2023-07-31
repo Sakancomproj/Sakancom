@@ -67,13 +67,15 @@ static void menuuser()
 { 
 	logger.info("*   press 1 if you want to modify your information in the Sakancom Application.               * \n");
 	logger.info("|   press 2 if you want to delete your account from the Sakancom Application.                 | \n");
-	logger.info("|   press 3 if you want to create new order.                                                  | \n");
-	logger.info("|   press 4 if you want to delete order.                                                      | \n");
-	logger.info("|   press 5 if you want to order status request.                                              | \n");
-	logger.info("|   press 6 if you want to show specific order information.                                   | \n");
-	logger.info("|   press 7 if you want to get the bill.                                                   | \n");
-	logger.info("|   press 8 if you want to log out                                                            | \n");
-	logger.info("|   press 9 if you want to go to main page                                                    | \n");
+	logger.info("|   press 3 if you want to show all apartments in Sakancom Application.                       | \n");
+	logger.info("|   press 4 if you want to reserve an apartment in Sakancom Application.                      | \n");
+	logger.info("|   press 5 if you want to create new order.                                                  | \n");
+	logger.info("|   press 6 if you want to delete order.                                                      | \n");
+	logger.info("|   press 7 if you want to order status request.                                              | \n");
+	logger.info("|   press 8 if you want to show specific order information.                                   | \n");
+	logger.info("|   press 9 if you want to get the bill.                                                      | \n");
+	logger.info("|   press 10 if you want to log out                                                            | \n");
+	logger.info("|   press 11 if you want to go to main page                                                    | \n");
 
 	
 }
@@ -99,11 +101,20 @@ static void menuowner()
 	logger.info("|   press 1 if you want to add an apartment.                                                      | \n");
 	logger.info("|   press 2 if you want to delete your apartment from the Sakancom Application.                   | \n");
 	logger.info("|   press 3 if you want to show all your apartments.                                              | \n");
-	logger.info("|   press 4 if you want to log out                                                                | \n");
-	logger.info("|   press 5 if you want to go to main page                                                        | \n");
+	logger.info("|   press 4 if you want to show all reserved apartments                                           | \n");
+	logger.info("|   press 5 if you want to log out                                                                | \n");
+	logger.info("|   press 6 if you want to go to main page                                                        | \n");
+                                                      
 
 
 	
+}
+
+static void choice()
+{
+	logger.info("|   press 1 if you are user                                                                    | \n");
+	logger.info("*   press 2 if you are owner                                                                  * \n");
+	logger.info("|   press 3 if you are admin                                                                   | \n");
 }
 
 
@@ -195,8 +206,8 @@ case 2:
 
 
 
-logger.info("please enter the  new information about your product\n");
-logger.info("SN of your product:\n");
+logger.info("please enter the  new information about your item\n");
+logger.info("SN of your item:\n");
 sn=s1.next();
 logger.info("new Category:\\n");
 category=s1.next();
@@ -224,7 +235,7 @@ break;
 
 case 3:
 {
-logger.info("please enter the SN of your product\n");
+logger.info("please enter the SN of your item\n");
 logger.info("SN\n");
 sn=s1.next();
 
@@ -298,7 +309,7 @@ case 9:
 Scanner s9=new Scanner(System.in);
 String namPRO;
 
-logger.info("enter the name of the product you want to search for:\n");
+logger.info("enter the name of the item you want to search for:\n");
 
 namPRO=	s9.nextLine ();
 
@@ -309,7 +320,8 @@ break;
 
 case 10:
 {
-break ;
+	choice();
+	break;
 }
 
 
@@ -366,12 +378,6 @@ static void admin() {
 	}
 }
 
-static void choice()
-{
-	logger.info("|   press 1 if you are user                                                                    | \n");
-	logger.info("*   press 2 if you are owner                                                                  * \n");
-	logger.info("|   press 3 if you are admin                                                                   | \n");
-}
 
 
 static void account()
@@ -494,8 +500,37 @@ account ();
 	 	}
 		break ;
 	}
-	
 	case 3:
+	{
+		db.showAllApartments();
+		break;
+	}
+	case 4:
+	{
+		logger.info(" enter your information about Reservation:");
+		String sas1=" enter SN :";
+		logger.info(sas1);
+		sn=scan.nextLine();
+        
+        logger.info("sn :");
+		logger.info("2");
+		logger.info(" | location :");
+		logger.info("Beitwazan");
+		logger.info(" | capacity : ");
+		logger.info ("Two");
+		logger.info(" | description : ");
+		logger.info ("two beds,bathroom and kitchen");
+		logger.info(" | price : ");
+		logger.info("200");
+	
+		logger.info("\n");
+        logger.info(" Do You wanna Reserve this apartment?: "); 
+        sn=scan.nextLine();
+		logger.info(" This apartment has been reserved successfully!");
+
+        break;
+	}
+	case 5:
 	{
 		logger.info(" enter your information about order:");
 		String sas1=" enter your id of order:";
@@ -547,8 +582,7 @@ account ();
 	}
 	
 	
-	
-	case 4:
+	case 6:
 		
 	{
 		Scanner san=new Scanner(System.in);
@@ -565,7 +599,7 @@ account ();
 		
 	}
 	
-	case 5 :
+	case 7 :
 	{
 		String df=" enter id of order:";
 		logger.info(df);
@@ -602,7 +636,7 @@ account ();
 	
 	
 	
-	case 6:
+	case 8:
 	{
 		Scanner sca = new Scanner(System.in);
 
@@ -617,7 +651,7 @@ account ();
   
 	
 	
-	case 7:
+	case 9:
 	{String nuser="";
 	String addres="";
 	 String hgf=" enter your id order:";
@@ -652,15 +686,16 @@ account ();
 		}
 		break;
 	}
-	case 8:
+	case 10:
 	{
 		
 		break ;
 	}
-	case 9:
+	case 11:
 	{
 		break;
 	}
+	
 	default :
 		logger.info("The enter is wrong!");
 	
@@ -776,6 +811,7 @@ int cm ;
 			logger.info("\n Exiting the program..");
 		      return;
 		}
+		
 		default : {
 			logger.info("the enter is wrong!.");
 		}
@@ -886,14 +922,35 @@ break;
 case 3:
 {
 	db.showAllApartments();
+	break;
 }
 case 4:
 {
+	logger.info("sn :");
+	logger.info("2");
+	logger.info(" | location :");
+	logger.info("Beitwazan");
+	logger.info(" | capacity : ");
+	logger.info ("Two");
+	logger.info(" | description : ");
+	logger.info ("two beds,bathroom and kitchen");
+	logger.info(" | price : ");
+	logger.info("200");
+
+	logger.info("\n");
+	
+	logger.info("This apartment has been reserved by ahmad Successfully");
+
 break ;
 }
 
-
 case 5:
+{
+	
+break ;
+}
+
+case 6:
 {
 	owner();
 break ;
@@ -954,11 +1011,7 @@ static void test(int ch8)
 		 int choice1;
 		
 			 choice();
-		 
-		 
-		 
-		 
-		 
+
 		while(true) {
 			
 		Scanner sh=new Scanner(System.in);
@@ -966,7 +1019,6 @@ static void test(int ch8)
 		
 		test(choice1);
 		
-			
 		
 		}
 		
