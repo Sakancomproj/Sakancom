@@ -420,7 +420,7 @@ List <String> pass=new ArrayList <String>();
 					return true;
 				}
 			}
-			logger.info("there is in user with this name.");
+			logger.info("there is no user with this name.");
 			return false;
 			
 		}
@@ -739,7 +739,7 @@ List <String> pass=new ArrayList <String>();
 				en+=dbuser.get(i).point;
 			}
 			finalInc=en-count;
-			logger.info("Final Inceam :");
+			logger.info("Final Income :");
 			String j=finalInc+"";
 			logger.info(j);
 			logger.info("$");

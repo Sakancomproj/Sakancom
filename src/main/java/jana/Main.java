@@ -69,14 +69,13 @@ static void menuadmin()
 	logger.info("|   press 1 if you want to create new item in the Sakancom Application.                       | \n");
 	logger.info("*   press 2 if you want to update your information about item in the Sakancom Application.    * \n");
 	logger.info("|   press 3 if you want to delete your item from the Sakancom Application.                    | \n");
-	logger.info("|   press 4 if you want to show report.                                                       | \n");
-	logger.info("|   press 5 if you want to request the company's income.                                      | \n");
-	logger.info("|   press 6 if you want to show all orders in the company.                                    | \n");
-	logger.info("|   press 7 if you want to view unpaid orderes.                                               | \n");
-	logger.info("|   press 8 if you want to search for user.                                                   | \n");
-	logger.info("|   press 9 if you want to search for item.                                                   | \n");
-	logger.info("|   press 10 if you want to log out                                                           | \n");
-	logger.info("|   press 11 if you want to go to main page                                                   | \n");
+	logger.info("|   press 4 if you want to request the company's income.                                      | \n");
+	logger.info("|   press 5 if you want to show all orders in the company.                                    | \n");
+	logger.info("|   press 6 if you want to view unpaid orderes.                                               | \n");
+	logger.info("|   press 7 if you want to search for user.                                                   | \n");
+	logger.info("|   press 8 if you want to search for item.                                                   | \n");
+	logger.info("|   press 9 if you want to log out                                                            | \n");
+	logger.info("|   press 10 if you want to go to main page                                                   | \n");
 
 }
 
@@ -199,7 +198,7 @@ logger.info("new name:\n");
 name=s1.next();
 logger.info("new picture:\n");
 picture=s1.next();
-logger.info("new pdescription:\n");
+logger.info("new description:\n");
 description=s1.next();
 
 db.updateitem(sn, category, name, picture, description);
@@ -239,19 +238,8 @@ break;
 
 }
 
+
 case 4:
-{
-
-//REPORT.showall();
-
-
-break;
-
-
-}
-
-
-case 5:
 {
 db.encome();
 break;
@@ -259,7 +247,7 @@ break;
 
 
 }
-case 6:
+case 5:
 {
 
 
@@ -268,7 +256,7 @@ break;
 }
 
 
-case 7:
+case 6:
 {
 db.dept();
 break;
@@ -276,7 +264,7 @@ break;
 
 
 
-case 8:
+case 7:
 {Scanner s8=new Scanner(System.in);
 
 String namuser;
@@ -288,7 +276,7 @@ db.searchuser(namuser);
 break;
 
 }
-case 9:
+case 8:
 {
 Scanner s9=new Scanner(System.in);
 String namPRO;
@@ -302,14 +290,14 @@ break;
 
 }
 
-case 10:
+case 9:
 {
 	choice();
 	break;
 }
 
 
-case 11:
+case 10:
 {
 	admin();
 break ;
