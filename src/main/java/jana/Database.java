@@ -210,7 +210,8 @@ List <String> pass=new ArrayList <String>();
 		}
 	 
 	 public  void createapartment(String location1,String capacity1,String picture1,String description1,int price1)
-		{ Apartment obj20=new Apartment();
+		{ 
+		 Apartment obj20=new Apartment();
 			
 			
 				obj20.sn=Integer.toString(1+dbapartment.size());
@@ -776,7 +777,7 @@ List <String> pass=new ArrayList <String>();
 		}
 		
 		public boolean showAllApartments() {
-			for(int i=0;i<dborder.size();i++) {
+			for(int i=0;i<dbapartment.size();i++) {
 		 
 				logger.info("sn :");
 				logger.info(dbapartment.get(i).sn);

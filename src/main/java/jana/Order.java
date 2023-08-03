@@ -22,9 +22,6 @@ public class Order {
 			 static Database db=new Database();
 		
 			 float totalprice1;
-		
-			 /* String nameworker ;
-		   String idworker;*/
 			 boolean paid=false;
 		
 			

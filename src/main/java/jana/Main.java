@@ -852,8 +852,8 @@ descrip=s7.next();
 String sma="  ";
 logger.info("appartment created successfully, if you want to check it enter 1  ");
 if (s7.nextInt()==1)
-{db.createapartment(location,capacity, picture, description,10);
-for (int i=0 ;i < db.dbitem.size();i++)
+{db.createapartment(location,capacity, pic, descrip,10);
+for (int i=0 ;i < db.dbapartment.size();i++)
 {
 logger.info(sma);
 logger.info(db.dbapartment.get(i).sn);
@@ -863,9 +863,9 @@ logger.info(db.dbapartment.get(i).capacity);
 logger.info(db.dbapartment.get(i).location);
 	logger.info(sma);
 logger.info(db.dbapartment.get(i).description);
-logger.info(sma);
+	logger.info(sma);
 logger.info(db.dbapartment.get(i).picture);
-logger.info("\n");
+	logger.info("\n");
 }
 }
 break;
