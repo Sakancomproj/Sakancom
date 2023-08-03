@@ -455,20 +455,24 @@ account ();
 	}
 	case 2:
 	{
-		
 		boolean logout=false ;
-		logout=db.logoutcompletely(iduser);	
-		logger.info("id_user:");
-		logger.info(iduser);
-  		
-  	
-   if(logout)logger.info("Your account has been cancelled");
-   
-   for (int i=0 ;i <db.dbuser.size();i++)
-	 	{
-	 		
-  	 logger.info(db.dbuser.get(i).name);
-  	 logger.info("\n");
+		logger.info("please enter your ID :\n");
+		logger.info("ID\n");
+		iduser=scan.next();
+		 if(logout)logger.info("Your account has been cancelled");
+		
+		db.deleteuser(iduser);
+		for (int i=0 ;i <db.dbuser.size();i++)
+		{
+
+			logger.info(db.dbuser.get(i).id);
+			logger.info(db.dbuser.get(i).phone);
+			logger.info(db.dbuser.get(i).email);
+			logger.info(db.dbuser.get(i).name);
+			logger.info(db.dbuser.get(i).password);
+			logger.info(db.dbuser.get(i).address);
+			logger.info("\n");
+		
 	 	}
 		break ;
 	}
@@ -482,7 +486,7 @@ account ();
 		logger.info(" enter your information about Reservation:");
 		String sas1=" enter SN :";
 		logger.info(sas1);
-		sn=scan.nextLine();
+		sn=scan.next();
         
         logger.info("sn :");
 		logger.info("2");

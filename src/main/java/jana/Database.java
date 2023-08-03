@@ -103,7 +103,7 @@ List <String> pass=new ArrayList <String>();
 			obj6.idorder="3";
 			obj6.id="3";
 			obj6.count=2;
-			obj6.name="caler";
+			obj6.name="carpet";
 		    obj6.lateDate=LocalDate.of(2023,4,19);
 			obj6.timeReceipt=0;
 			obj6.paid=false;
@@ -711,6 +711,18 @@ List <String> pass=new ArrayList <String>();
 				else if (dbitem.get(i).sn.equals(id))
 			{
 					dbitem.remove(i);
+				
+			}
+				
+		}}
+		
+		public  void deleteuser(String id) {
+			for (int i=0 ;i < dbuser.size();i++)
+			{
+				if(dbuser.isEmpty())break;
+				else if (dbuser.get(i).id.equals(id))
+			{
+					dbuser.remove(i);
 				
 			}
 				

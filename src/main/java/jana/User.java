@@ -24,7 +24,6 @@ public class User {
 		 this.initialuser();
 	 }
 	
-	//check thisssssss
 	 
 	public void initialuser() {
 		this.address="Nablus";
