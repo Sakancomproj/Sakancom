@@ -229,26 +229,6 @@ List <String> pass=new ArrayList <String>();
 			
 		}
 	 
-	 public boolean logoutcompletely(String id3) {
-			
-			for(int i=0;i< dbuser.size();i++ ) {
-				 if(dbuser.isEmpty())break;
-				 
-				 else if(dbuser.get(i).id.equals(id3)) {
-					dbuser.remove(i);
-
-					for (int j=0 ;j <dbuser.size();j++)
-					{
-						logger.info(dbuser.get(j).name);
-						logger.info("  ");
-					}
-					return true;
-				}
-			
-				}
-			
-			return false;
-		}
 	 
 	 public   boolean checkemail(String email)
 		{  for (int i=0 ;i < dbuser.size();i++)
