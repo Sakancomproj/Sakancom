@@ -55,11 +55,10 @@ static void menuuser()
 	logger.info("|   press 4 if you want to reserve an apartment in Sakancom Application.                      | \n");
 	logger.info("|   press 5 if you want to create new order.                                                  | \n");
 	logger.info("|   press 6 if you want to delete order.                                                      | \n");
-	logger.info("|   press 7 if you want to order status request.                                              | \n");
-	logger.info("|   press 8 if you want to show specific order information.                                   | \n");
-	logger.info("|   press 9 if you want to get the bill.                                                      | \n");
-	logger.info("|   press 10 if you want to log out                                                            | \n");
-	logger.info("|   press 11 if you want to go to main page                                                    | \n");
+	logger.info("|   press 7 if you want to show specific order information.                                   | \n");
+	logger.info("|   press 8 if you want to get the bill.                                                      | \n");
+	logger.info("|   press 9 if you want to log out                                                           | \n");
+	logger.info("|   press 10 if you want to go to main page                                                   | \n");
 
 	
 }
@@ -575,44 +574,7 @@ account ();
 		
 	}
 	
-	case 7 :
-	{
-		String df=" enter id of order:";
-		logger.info(df);
-			idorder=scan.nextLine();
-	          scan.nextLine();
-		db.requeststatus(iduser, idorder);
-		
-		for(int i=0;i<db.dborder.size();i++) {
-			 
-			logger.info("id= ");
-		logger.info(db.dborder.get(i).idorder);
-			logger.info(" , id user= ");
-		logger.info(db.dborder.get(i).id);
-		logger.info(" , type of order= ");
-		logger.info(db.dborder.get(i).name);
-		logger.info(" , discount= ");
-			String dis3=""+db.dborder.get(i).discount;
-		logger.info(dis3);
-		logger.info(" , price= ");
-			String pr3=db.dborder.get(i).price+"";
-		logger.info(pr3);
-		logger.info(" , received date= ");
-			String h3=""+db.dborder.get(i).lateDate;
-		logger.info(h3);	
-			logger.info(" , days left= ");	
-			String t3=""+db.dborder.get(i).timeReceipt;
-			logger.info(t3);
-			String co3=""+db.dborder.get(i).count;
-			logger.info(" , count= ");
-			logger.info(co3);
-		}
-		break;
-	}
-	
-	
-	
-	case 8:
+	case 7:
 	{
 		Scanner sca = new Scanner(System.in);
 
@@ -627,7 +589,7 @@ account ();
   
 	
 	
-	case 9:
+	case 8:
 	{String nuser="";
 	String addres="";
 	 String hgf=" enter your id order:";
@@ -662,12 +624,12 @@ account ();
 		}
 		break;
 	}
-	case 10:
+	case 9:
 	{
 		
 		break ;
 	}
-	case 11:
+	case 10:
 	{
 		break;
 	}

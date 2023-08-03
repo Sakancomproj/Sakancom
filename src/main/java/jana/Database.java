@@ -17,7 +17,6 @@ List <String> pass=new ArrayList <String>();
 	 List <Item> dbitem=new ArrayList <Item> ();
 	 List <Owner> dbowner=new ArrayList <Owner> ();
 	 List <Apartment> dbapartment=new ArrayList <Apartment> ();
-	// List <Reservation> dbrev=new ArrayList <Reservation> ();
 	 private static final Logger logger = Logger.getLogger(Database.class.getName());
 	 User obj1=new User();
 	 User obj2=new User();
@@ -587,28 +586,6 @@ List <String> pass=new ArrayList <String>();
 			return false;
 		}
 		
-		public boolean requeststatus(String iduser, String idord) {
-			for(int i=0;i<dborder.size();i++) {
-				if(dborder.get(i).id.equals(iduser)&&dborder.get(i).idorder.equals(idord)) {
-					if(dborder.get(i).timeReceipt>2) {
-						logger.info("The order is currently pending.");
-						return true;
-					}else if(dborder.get(i).timeReceipt==0) {
-						logger.info("The order is ready for pickup.");
-						return true;
-					}else if(dborder.get(i).timeReceipt<=2) {
-						logger.info("The order is in progress and soon it will be ready for delivery.");
-						return true;
-					}
-					
-					
-				}
-			}
-			logger.info("There is no order with this number to request its status.");
-					
-			
-				return false;
-			}
 		
 		public boolean infoorder(String iduser, String id) {
 			for(int i=0;i<dborder.size();i++) {
