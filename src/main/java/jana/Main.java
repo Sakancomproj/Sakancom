@@ -1,24 +1,8 @@
 package jana;
 
-import java.lang.System.Logger.Level;
 import java.util.Scanner;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-
-import jana.Admin;
-import jana.Database;
-//import jana.Main;
-import jana.Order;
-import jana.Apartment;
-//import jana.REPORT;
-import jana.States;
-import jana.User;
-//import jana.WORK;
-
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
 
 public class Main {
 	
