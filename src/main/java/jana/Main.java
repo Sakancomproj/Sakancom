@@ -267,7 +267,7 @@ case 7:
 {Scanner s8=new Scanner(System.in);
 
 String namuser;
-logger.info("enter the name of the user you want to search for:\n");
+logger.info("Enter the name of the user you want to search for:\n");
 
 namuser=	s8.nextLine ();
 
@@ -482,24 +482,24 @@ account ();
 	}
 	case 4:
 	{
-		logger.info(" enter your information about Reservation:");
-		String sas1=" enter SN :";
+		logger.info(" Enter your information about the Reservation:");
+		String sas1=" Enter SN :";
 		logger.info(sas1);
 		sn=scan.next();
         
         logger.info("sn :");
 		logger.info("2");
-		logger.info(" | location :");
-		logger.info("Beitwazan");
-		logger.info(" | capacity : ");
+		logger.info(" | Location :");
+		logger.info("Beitwazan ");
+		logger.info(" | Capacity : ");
 		logger.info ("Two");
-		logger.info(" | description : ");
-		logger.info ("two beds,bathroom and kitchen");
-		logger.info(" | price : ");
+		logger.info(" | Description : ");
+		logger.info ("Two beds,bathroom and kitchen");
+		logger.info(" | Price : ");
 		logger.info("200");
 	
 		logger.info("\n");
-        logger.info(" Do You wanna Reserve this apartment?: "); 
+        logger.info(" Do You want to Reserve this apartment?: "); 
         sn=scan.nextLine();
 		logger.info(" This apartment has been reserved successfully!");
 
