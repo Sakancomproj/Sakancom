@@ -106,23 +106,7 @@ public void the_user_with_id_is_already_registered(String string) {
 public void error_message_appears_to_the_user(String string) {
     assertTrue(ass3);
 }
-	
-
-public boolean logApp1; 
-String id3;
-boolean f;
-boolean removu;
 
 
-@When("the user try to log out from the Application")
-public void the_user_try_to_log_out_from_the_application() {
-    if(!f && logApp1) {
-    	removu= dbu.logoutcompletely(id3);
-    }
-}
 
-@Then("the user is out of the Application")
-public void the_user_is_out_of_the_application() {
-   assertTrue(removu);
-}
 }

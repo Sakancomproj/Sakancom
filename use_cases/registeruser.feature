@@ -21,9 +21,3 @@ Scenario: register users when this user is already registered
 	#And the user tries to register for the second time 
 	Then error message " This user is already registered" appears to the user
 	
-	
-#Scenario: log off user
-     #Given that the user with id "3" register
-     #When  the user has no dabts to the company
-     #And  the user try to log out from the Application
-#	Then the user is out of the Application

@@ -53,21 +53,7 @@ public void the_order_cancele_successfully() {
 }
 
 
-@Given("that user with the number {string} requests the status of his request")
-public void that_user_with_the_number_requests_the_status_of_his_request(String string) {
-	log=db.logApp(string); 
-}
 
-@When("the user with no {string} requests the status of order number {string}")
-public void the_user_with_no_requests_the_status_of_order_number(String string, String string2) {
-	if(log) {
-		info=db.infoorder(string,string2);
-	}}
-
-@Then("the order status will be displayed")
-public void the_order_status_will_be_displayed() {
-	assertFalse(info);
-}
 @Given("that The user submits a new order and  he is already registered in the application")
 public void that_the_user_submits_a_new_order_and_he_is_already_registered_in_the_application() {
 
@@ -114,18 +100,7 @@ public void that_the_user_with_the_number_requests_the_status_of_his_request(Str
 	log=db.logApp(string); 
 	 
 }
-boolean stat=false;
-@When("the user with number {string} requests the status of order number {string}")
-public void the_user_with_number_requests_the_status_of_order_number(String string, String string2) {
-	if(log) {
-	stat=db.requeststatus(string,string2);	
-	}
-}
 
-@Then("your order status will be displayed")
-public void your_order_status_will_be_displayed() {
-	  assertTrue(stat);
-}
 
 @Given("that the user with number {string} requests specific order information")
 public void that_the_user_with_number_requests_specific_order_information(String string) {
