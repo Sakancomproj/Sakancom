@@ -79,8 +79,8 @@ List <String> pass=new ArrayList <String>();
 			
 			dbitem.add(obj3);
 
-			obj4.category="Furniture";
-			obj4.name="Chair";
+			obj4.category="Accessorise";
+			obj4.name="vasa";
 			obj4.picture="c2";
 			obj4.sn="2";
 			obj4.description="wood";
