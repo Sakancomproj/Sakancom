@@ -130,8 +130,8 @@ int  adlogin =0;
   {
   	logger.info("welcome..\n");
   
-	
-while(true) {
+  	boolean keepRunning = true;
+while(keepRunning) {
 
 menuadmin();
 adnum=s1.nextInt();
@@ -304,9 +304,11 @@ break ;
 default :{
 logger.info("the enter is wrong!");
 }
-
+logger.info("Do you want to continue? (Enter '1' to continue, any other number to exit): ");
+int continueChoice = s1.nextInt();
+keepRunning = (continueChoice == 1);
 }
-
+s1.close();
 }
 } 
 		}}	
@@ -412,8 +414,9 @@ account ();
   {
   	logger.info("welcome...\n");
   
- 
-  while(true) {
+  	boolean keepRunning = true;
+  	
+  while(keepRunning) {
   	menuuser();
       num1=s.nextInt();	
   switch (num1)
@@ -636,13 +639,18 @@ account ();
 	
 	default :
 		logger.info("The enter is wrong!");
+		break;
 	
   }
+  logger.info("Do you want to continue? (Enter '1' to continue, any other number to exit): ");
+  int continueChoice = s.nextInt();
+  keepRunning = (continueChoice == 1);
   
  
   
   }
-  }
+  s.close();
+  };
 	
 	break;
 	
@@ -713,7 +721,7 @@ account ();
 	
 	default :
 		logger.info("your entery is wrong!");
-	
+	break;
 	
 }
 
@@ -786,8 +794,8 @@ int owlogin = 0;
   {
   	logger.info("welcome..\n");
   
-	
-while(true) {
+  	boolean keepRunning = true;
+while(keepRunning) {
 
 menuowner();
 ownum=s7.nextInt();
@@ -885,8 +893,11 @@ break ;
 default :{
 logger.info("the enter is wrong!");
 }
-
+logger.info("Do you want to continue? (Enter '1' to continue, any other number to exit): ");
+int continueChoice = s7.nextInt();
+keepRunning = (continueChoice == 1);
 }
+s7.close();
 
 }
 } 
