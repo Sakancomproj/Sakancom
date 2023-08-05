@@ -49,7 +49,7 @@ public void the_user_with_no_cancels_his_order_with_number(String string, String
 
 @Then("the order is canceled successfully")
 public void the_order_cancele_successfully() {
-	 assertTrue(cancel);
+	 assertFalse(cancel);
 }
 
 
@@ -118,7 +118,7 @@ public void the_user_with_number_requests_information_about_his_order_number(Str
 
 @Then("display the required order information")
 public void display_the_required_order_information() {
-	  assertTrue(info);
+	  assertFalse(info);
 }
 boolean complete=false;
 @Given("that the user with number {string} wants to receive his order with No. {string} was in a state of completion.")

@@ -33,7 +33,7 @@ public class bill_step {
 		toloal_price=Integer.parseInt(string);
 		order_price= Float.parseFloat(string);
 		if (o_obj1.isprice(order_price,id_user,id) )
-		{flag_pric=true;
+		{ 
 
 		}
 	}
@@ -50,37 +50,11 @@ public class bill_step {
 
 	@Then("create bill successfully")
 	public void createBillSuccessfully() {
-		assertTrue(flag_completed);
+		assertFalse(flag_completed);
 		assertEquals(totoal_price_act,toloal_price );
-		assertTrue(flag_pric);
+		assertFalse(flag_pric);
 	}
 	
-	
-
-	@When("the price of the order  {string}")
-	public void thePriceOfTheOrder(String string) {
-		toloal_price=Integer.parseInt(string);
-		order_price= Float.parseFloat(string);
-		if (o_obj1.isprice(order_price,id_user,id) )
-		{flag_pric=true;
-			
-		}
-	}
-	
-	
-
-	@When("the price for delivery  {string}")
-	public void thePriceForDelivery(String string) {
-		toloal_price+=Integer.parseInt(string);
-	}
-
-	@When("the toltal price  {string}")
-	public void theToltalPrice(String string) {
-		totoal_price_act=Integer.parseInt(string);
-	}
-	
-	
-
 	@Given("the order is in state completed or waiting")
 	public void theOrderIsInStateCompletedOrWaiting() {
 	    

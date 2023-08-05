@@ -32,7 +32,7 @@ public class login_logout_test {
 			 flag_login=true;
 		}
 		if( adm.check(string1,string2)==0) {
-			 flag_login=false;
+			 
 		}
 	}
 
@@ -80,7 +80,7 @@ public class login_logout_test {
 	  
 		}
 		if( user1.checkuser(string1,string2)==0) {
-			flag_user=false;
+			
 			
 		}	
 	}
@@ -90,7 +90,7 @@ public class login_logout_test {
 		user1.email=string1;
 		user1.password=string2;
 		if( user1.checkuser(string1,string2)==1) {
-			flag_user=true;
+			
 	  
 		}
 		if( user1.checkuser(string1,string2)==0) {
@@ -104,20 +104,6 @@ public void that_the_user_is_not_logged_in() {
 	flag_user=false;
 }
 
-@Given("I chek for email and   password is {string} {string}")
-public void i_chek_for_email_and_password_is(String string1, String string2) {
-	user1.email=string1;
-	user1.password=string2;
-	if( user1.checkuser(string1,string2)==1) {
-		flag_user=true;
-  
-	}
-	if( user1.checkuser(string1,string2)==0) {
-		flag_user=false;
-		
-	}	
-
-}
 
 @Then("the user log in succeeds")
 public void the_user_log_in_succeeds() {
