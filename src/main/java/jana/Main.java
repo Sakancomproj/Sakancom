@@ -321,7 +321,8 @@ static void admin() {
 	
 	
 	Scanner s1=new Scanner(System.in);
-	while(true) {
+	boolean keepRunning = true;
+	while(keepRunning) {
 		
 	account2();
 		ch=s1.nextInt();
@@ -344,8 +345,11 @@ static void admin() {
 		}
 		default : {
 			logger.info("the enter is wrong!.");
-		}
 			
+		}
+		logger.info("Do you want to continue? (Enter '1' to continue, any other number to exit): ");
+        int continueChoice = s1.nextInt();
+        keepRunning = (continueChoice == 1);
 				
 		}
 	}
@@ -383,7 +387,8 @@ static void sn2() {
 
 static void user ()
 {
-	while(true)
+	boolean keepRunning = true;
+	while(keepRunning)
 	{
 
 account ();
@@ -396,6 +401,7 @@ account ();
 
 	case 1: 
 	{
+		
 	while(true) {
 	
 			
@@ -414,7 +420,6 @@ account ();
   {
   	logger.info("welcome...\n");
   
-  	boolean keepRunning = true;
   	
   while(keepRunning) {
   	menuuser();
@@ -736,7 +741,8 @@ int cm ;
 	
 	
 	Scanner s4=new Scanner(System.in);
-	while(true) {
+	boolean keepRunning = true;
+	while(keepRunning) {
 		
 	account2();
 		cm=s4.nextInt();
@@ -761,9 +767,12 @@ int cm ;
 		default : {
 			logger.info("the enter is wrong!.");
 		}
-			
+		logger.info("Do you want to continue? (Enter '1' to continue, any other number to exit): ");
+        int continueChoice = s4.nextInt();
+        keepRunning = (continueChoice == 1);
 				
 		}
+		s4.close();
 	}
 	  
 }
