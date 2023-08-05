@@ -267,7 +267,7 @@ case 7:
 {Scanner s8=new Scanner(System.in);
 
 String namuser;
-logger.info("Enter the name of the user you want to search for:\n");
+logger.info("enter the name of the user you want to search for:\n");
 
 namuser=	s8.nextLine ();
 
