@@ -482,24 +482,24 @@ account ();
 	}
 	case 4:
 	{
-		logger.info(" Enter your information about the Reservation:");
-		String sas1=" Enter SN :";
+		logger.info(" enter your information about Reservation:");
+		String sas1=" enter SN :";
 		logger.info(sas1);
 		sn=scan.next();
         
         logger.info("sn :");
 		logger.info("2");
-		logger.info(" | Location :");
-		logger.info("Beitwazan ");
-		logger.info(" | Capacity : ");
+		logger.info(" | location :");
+		logger.info("Beitwazan");
+		logger.info(" | capacity : ");
 		logger.info ("Two");
-		logger.info(" | Description : ");
-		logger.info ("Two beds,bathroom and kitchen");
-		logger.info(" | Price : ");
+		logger.info(" | description : ");
+		logger.info ("two beds,bathroom and kitchen");
+		logger.info(" | price : ");
 		logger.info("200");
 	
 		logger.info("\n");
-        logger.info(" Do You want to Reserve this apartment?: "); 
+        logger.info(" Do You wanna Reserve this apartment?: "); 
         sn=scan.nextLine();
 		logger.info(" This apartment has been reserved successfully!");
 
