@@ -661,8 +661,6 @@ account ();
   s.close();
   }
 	
-	break;
-	
 		}
 	logger.info("Do you want to continue? (Enter '1' to continue, any other number to exit): ");
     int continueChoice = s.nextInt();
