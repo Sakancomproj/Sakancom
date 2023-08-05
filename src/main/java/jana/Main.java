@@ -366,6 +366,18 @@ static void account2()
 	
 }
 
+static void sn2() {
+	logger.info("sn :");
+	logger.info("2");
+	logger.info(" | location :");
+	logger.info("Beitwazan");
+	logger.info(" | capacity : ");
+	logger.info ("Two");
+	logger.info(" | description : ");
+	logger.info ("two beds,bathroom and kitchen");
+	logger.info(" | price : ");
+	logger.info("200");
+}
 
 static void user ()
 {
@@ -486,21 +498,9 @@ account ();
 		String sas1=" enter SN :";
 		logger.info(sas1);
 		sn=scan.next();
-        
-        logger.info("sn :");
-		logger.info("2");
-		logger.info(" | location :");
-		logger.info("Beitwazan");
-		logger.info(" | capacity : ");
-		logger.info ("Two");
-		logger.info(" | description : ");
-		logger.info ("two beds,bathroom and kitchen");
-		logger.info(" | price : ");
-		logger.info("200");
-	
-		logger.info("\n");
+        sn2();
         logger.info(" Do You wanna Reserve this apartment?: "); 
-        sn=scan.nextLine();
+        sn=scan.next();
 		logger.info(" This apartment has been reserved successfully!");
 
         break;
@@ -864,19 +864,7 @@ case 3:
 }
 case 4:
 {
-	logger.info("sn :");
-	logger.info("2");
-	logger.info(" | location :");
-	logger.info("Beitwazan");
-	logger.info(" | capacity : ");
-	logger.info ("Two");
-	logger.info(" | description : ");
-	logger.info ("two beds,bathroom and kitchen");
-	logger.info(" | price : ");
-	logger.info("200");
-
-	logger.info("\n");
-	
+	sn2();
 	logger.info("This apartment has been reserved by ahmad Successfully");
 
 break ;
