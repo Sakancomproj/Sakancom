@@ -109,7 +109,8 @@ int  adlogin =0;
 	
 	
 	Scanner s1=new Scanner(System.in);
-	while(true) {
+	boolean keepRunning = true;
+	while(keepRunning) {
 		
 	
 	
@@ -129,8 +130,6 @@ int  adlogin =0;
   else 
   {
   	logger.info("welcome..\n");
-  
-  	boolean keepRunning = true;
 while(keepRunning) {
 
 menuadmin();
@@ -310,7 +309,12 @@ keepRunning = (continueChoice == 1);
 }
 s1.close();
 }
+logger.info("Do you want to continue? (Enter '1' to continue, any other number to exit): ");
+int continueChoice = s1.nextInt();
+keepRunning = (continueChoice == 1);
 } 
+	s1.close();
+	
 		}}	
 
 
@@ -402,7 +406,7 @@ account ();
 	case 1: 
 	{
 		
-	while(true) {
+	while(keepRunning ) {
 	
 			
 			logger.info("\n Your email :");
@@ -660,8 +664,10 @@ account ();
 	break;
 	
 		}
-		
-	break;
+	logger.info("Do you want to continue? (Enter '1' to continue, any other number to exit): ");
+    int continueChoice = s.nextInt();
+    keepRunning = (continueChoice == 1);
+	
 	}
 	
 	case 2: 
@@ -783,7 +789,8 @@ int owlogin = 0;
 	
 	int ownum;
 	Scanner s7=new Scanner(System.in);
-	while(true) {
+	boolean keepRunning = true;
+	while( keepRunning) {
 		
 	
 			logger.info("\n Your Email :");
@@ -802,8 +809,6 @@ int owlogin = 0;
   else 
   {
   	logger.info("welcome..\n");
-  
-  	boolean keepRunning = true;
 while(keepRunning) {
 
 menuowner();
@@ -911,6 +916,8 @@ s7.close();
 }
 } 
 	}
+	int continueChoice = s7.nextInt();
+    keepRunning = (continueChoice == 1);
 	
 }		
 
