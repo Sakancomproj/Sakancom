@@ -130,8 +130,8 @@ int  adlogin =0;
   {
   	logger.info("welcome..\n");
   
-boolean keepRunning = true;
-while(keepRunning) {
+	
+while(true) {
 
 menuadmin();
 adnum=s1.nextInt();
@@ -304,11 +304,9 @@ break ;
 default :{
 logger.info("the enter is wrong!");
 }
-logger.info("Do you want to continue? (Enter '1' to continue, any other number to exit): ");
-int continueChoice = s1.nextInt();
-keepRunning = (continueChoice == 1);
+
 }
-s1.close();
+
 }
 } 
 		}}	
@@ -867,6 +865,7 @@ case 3:
 case 4:
 {
 	sn2();
+
 	logger.info("This apartment has been reserved by ahmad Successfully");
 
 break ;
