@@ -12,7 +12,8 @@ import io.cucumber.java.en.When;
 
 public class reservation_steps {
 
-	User u=new User();		
+	User u=new User();	
+	//boolean log=false,neworder=false,cancel=false;	
 	Reservation ord=new Reservation();	
 	Database db=new Database();
 	
