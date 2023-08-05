@@ -29,6 +29,8 @@ List <String> pass=new ArrayList <String>();
 	 Apartment obj9=new Apartment();
 	 Apartment obj10=new Apartment();
 	 
+	 public static final String FURNITURE_TYPE = "Furniture";
+	 
 	 int equ=0;
 	
 	 User obj51=new User();
@@ -47,7 +49,8 @@ List <String> pass=new ArrayList <String>();
 	 
 	 void f(){
 			
-			
+		 
+		 
 			obj1.id="3";
 			obj1.address="zawata";
 			obj1.name="Taha";
@@ -70,7 +73,7 @@ List <String> pass=new ArrayList <String>();
 
 			dbuser.add(obj2);
 			
-			obj3.category="Furniture";
+			obj3.category=FURNITURE_TYPE;
 			obj3.name="Sofa";
 			obj3.picture="c1";
 			obj3.sn="1";
@@ -79,7 +82,7 @@ List <String> pass=new ArrayList <String>();
 			
 			dbitem.add(obj3);
 
-			obj4.category="Furniture";
+			obj4.category=FURNITURE_TYPE;
 			obj4.name="Chair";
 			obj4.picture="c2";
 			obj4.sn="2";
@@ -89,7 +92,7 @@ List <String> pass=new ArrayList <String>();
 			dbitem.add(obj4);
 
 			 
-			obj5.category="Furniture";
+			obj5.category=FURNITURE_TYPE;
 			obj5.name="bed";
 			obj5.picture="c3";
 			obj5.sn="3";
@@ -98,7 +101,7 @@ List <String> pass=new ArrayList <String>();
 			
 			dbitem.add(obj5);
 			
-			obj6.idorder="3";
+			obj6.idorder="2";
 			obj6.id="3";
 			obj6.count=2;
 			obj6.name="carpet";
@@ -112,8 +115,8 @@ List <String> pass=new ArrayList <String>();
 			
 	 
 			
-			obj7.idorder="4";
-			obj7.id="3";
+			obj7.idorder="3";
+			obj7.id="1";
 			obj7.count=4;
 			obj7.lateDate=LocalDate.of(2023,4,20);
 			obj7.name="curtains";
@@ -136,7 +139,7 @@ List <String> pass=new ArrayList <String>();
 
 			dbuser.add(obj51);
 			
-			obj71.idorder="6";
+			obj71.idorder="4";
 			obj71.id="5";
 			obj71.count=1;
 			obj71.lateDate=LocalDate.of(2023,4,30);
