@@ -48,7 +48,6 @@ List <String> pass=new ArrayList <String>();
 	 void f(){
 			
 			
-			
 			obj1.id="3";
 			obj1.address="zawata";
 			obj1.name="Taha";
