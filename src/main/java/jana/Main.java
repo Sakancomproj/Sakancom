@@ -303,11 +303,7 @@ break ;
 default :{
 logger.info("the enter is wrong!");
 }
-logger.info("Do you want to continue? (Enter '1' to continue, any other number to exit): ");
-int continueChoice = s1.nextInt();
-keepRunning = (continueChoice == 1);
 }
-s1.close();
 }
 logger.info("Do you want to continue? (Enter '1' to continue, any other number to exit): ");
 int continueChoice = s1.nextInt();
@@ -836,7 +832,7 @@ descrip=s7.next();
 
 
 String sma="  ";
-logger.info("appartment created successfully, if you want to check it enter 1  ");
+logger.info("apartment created successfully, if you want to check it enter 1  ");
 if (s7.nextInt()==1)
 {db.createapartment(location,capacity, pic, descrip,10);
 for (int i=0 ;i < db.dbapartment.size();i++)
@@ -905,11 +901,7 @@ break ;
 default :{
 logger.info("the enter is wrong!");
 }
-logger.info("Do you want to continue? (Enter '1' to continue, any other number to exit): ");
-int continueChoice = s7.nextInt();
-keepRunning = (continueChoice == 1);
 }
-s7.close();
 
 }
 } 
@@ -963,15 +955,18 @@ static void test(int ch8)
 		 int choice1;
 		
 			 choice();
-
-		while(true) {
+			 
+			 boolean keepRunning = true;
+		while(keepRunning ) {
 			
 		Scanner sh=new Scanner(System.in);
 		choice1=sh.nextInt();
 		
 		test(choice1);
 		
-		
+		System.out.println("Do you want to continue? (Enter '1' to continue, any other number to exit): ");
+        int continueChoice = sh.nextInt();
+        keepRunning = (continueChoice == 1);
 		}
 		
 	}
