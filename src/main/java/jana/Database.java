@@ -321,13 +321,13 @@ List <String> pass=new ArrayList <String>();
 					
 					 if(!(mail.contains("@"))) {
 						f4=true;
-						logger.info("The email you entered is wrong");
+						System.out.print("The email you entered is wrong");
 					} if(!(phon.length()==10 || phon.length()>10)) {
-						logger.info("The phone number you entered is incorrect");
+						System.out.print("The phone number you entered is incorrect");
 						f4=true;
 					}
 					 if(!(passwor.length()>6 || passwor.length()==6)) {
-						 logger.info("The password you entered is weak");
+						 System.out.print("The password you entered is weak");
 						f4=true;
 					}
 					
@@ -338,8 +338,8 @@ List <String> pass=new ArrayList <String>();
 			if(f || (f1&&f2) ||f4) {
 				if(f ||(f1&&f2)) {
 					if(num==1)
-						logger.info("You already have an account.Please re_enter your information ");
-					else if(num==2)	logger.info("The email and password are not valid. Please enter another ");
+						System.out.print("You already have an account.Please re_enter your information ");
+					else if(num==2)	System.out.print("The email and password are not valid. Please enter another ");
 				}
 				return false; 
 			}
@@ -358,19 +358,19 @@ List <String> pass=new ArrayList <String>();
 					dbuser.get(i).password=password;
 					dbuser.get(i).log=true;
 				}}	
-			logger.info("Your information has been modified ,this is your new information:");
+			System.out.print("Your information has been modified ,this is your new information:");
 			for(int i=0;i< dbuser.size();i++ ) {
 				if(dbuser.get(i).id.equals(id2)){
-					logger.info("name: ");
-					logger.info(dbuser.get(i).name);
-					logger.info(" phone:");
-					logger.info(dbuser.get(i).phone);
-					logger.info(" email:");
-					logger.info(dbuser.get(i).email);
-					logger.info(" address:");
-					logger.info(dbuser.get(i).address);
-					logger.info(" password:");
-					logger.info(dbuser.get(i).password);
+					System.out.print("name: ");
+					System.out.print(dbuser.get(i).name);
+					System.out.print(" phone:");
+					System.out.print(dbuser.get(i).phone);
+					System.out.print(" email:");
+					System.out.print(dbuser.get(i).email);
+					System.out.print(" address:");
+					System.out.print(dbuser.get(i).address);
+					System.out.print(" password:");
+					System.out.print(dbuser.get(i).password);
 					
 				}}	 
 			
@@ -382,24 +382,24 @@ List <String> pass=new ArrayList <String>();
 		{
 			for(int i=0;i<dbuser.size();i++ ) {
 				if(dbuser.get(i).name.equals(nameuser)) {
-					logger.info("user's id: ");
-					logger.info(dbuser.get(i).id);
-					logger.info("user's Name: ");
-					logger.info(dbuser.get(i).name);
-					logger.info("user's Address: ");
-					logger.info(dbuser.get(i).address);
-					logger.info("user's Email: ");
-					logger.info(dbuser.get(i).email);
-					logger.info("user's Phone: ");
-					logger.info(dbuser.get(i).phone);
-					logger.info("user's Point: ");
+					System.out.print("user's id: ");
+					System.out.print(dbuser.get(i).id);
+					System.out.print("user's Name: ");
+					System.out.print(dbuser.get(i).name);
+					System.out.print("user's Address: ");
+					System.out.print(dbuser.get(i).address);
+					System.out.print("user's Email: ");
+					System.out.print(dbuser.get(i).email);
+					System.out.print("user's Phone: ");
+					System.out.print(dbuser.get(i).phone);
+					System.out.print("user's Point: ");
 					String oo=dbuser.get(i).point+"";
-					logger.info(oo);
+					System.out.print(oo);
 				 
 					return true;
 				}
 			}
-			logger.info("there is no user with this name.");
+			System.out.print("there is no user with this name.");
 			return false;
 			
 		}
@@ -530,27 +530,27 @@ List <String> pass=new ArrayList <String>();
 					
 					for(int i=0;i<dborder.size();i++) {
 		    			 
-						logger.info("id= ");
-						logger.info(dborder.get(i).idorder);
-					logger.info(" , id user= ");
-						logger.info(dborder.get(i).id);
-						logger.info(" , type of order= ");
-							logger.info(dborder.get(i).name);
-						logger.info(" , discount= ");
+						System.out.print("id= ");
+						System.out.print(dborder.get(i).idorder);
+					System.out.print(" , id user= ");
+						System.out.print(dborder.get(i).id);
+						System.out.print(" , type of order= ");
+							System.out.print(dborder.get(i).name);
+						System.out.print(" , discount= ");
 						String n=dborder.get(i).discount+"";
-						logger.info(n);
-						logger.info(" , price= ");
+						System.out.print(n);
+						System.out.print(" , price= ");
 						String h=dborder.get(i).price+"";
-						logger.info(h);
-									logger.info(" , received date= ");
+						System.out.print(h);
+									System.out.print(" , received date= ");
 									String  o=dborder.get(i).lateDate+"";
-									logger.info(o);
-									logger.info(" , days left= ");
+									System.out.print(o);
+									System.out.print(" , days left= ");
 									String l=dborder.get(i).timeReceipt+"";
-									logger.info(l);
-									logger.info(" , count= ");
+									System.out.print(l);
+									System.out.print(" , count= ");
 									String p=dborder.get(i).count+"";
-									logger.info(p);
+									System.out.print(p);
 									
 						
 																																							
@@ -568,11 +568,11 @@ List <String> pass=new ArrayList <String>();
 			for(int i=0;i<dborder.size();i++) {
 				if(dborder.get(i).id.equals(iduser)&&dborder.get(i).idorder.equals(id)) {
 					if(dborder.get(i).timeReceipt==0) {
-						logger.info("The order is ready for pickup.cash payment upon receipt of the order");
+						System.out.print("The order is ready for pickup.cash payment upon receipt of the order");
 						dborder.get(i).paid=true;
 							return true;
 					}else {
-						logger.info("The order is not ready for pickup.");
+						System.out.print("The order is not ready for pickup.");
 							
 						return false;
 					}
@@ -580,7 +580,7 @@ List <String> pass=new ArrayList <String>();
 				
 				
 			}
-			logger.info("There is no order with this number to request its information.");
+			System.out.print("There is no order with this number to request its information.");
 		
 			return false;
 		}
@@ -590,32 +590,32 @@ List <String> pass=new ArrayList <String>();
 			for(int i=0;i<dborder.size();i++) {
 				if(dborder.get(i).id.equals(iduser)&&dborder.get(i).idorder.equals(id)) {
 				
-					logger.info("id= ");
-					logger.info(dborder.get(i).idorder);
-					logger.info(" , id user= ");
-					logger.info(dborder.get(i).id);
-					logger.info(" , type of order= ");
-					logger.info(dborder.get(i).name);
-					logger.info(" , discount= ");
+					System.out.print("id= ");
+					System.out.print(dborder.get(i).idorder);
+					System.out.print(" , id user= ");
+					System.out.print(dborder.get(i).id);
+					System.out.print(" , type of order= ");
+					System.out.print(dborder.get(i).name);
+					System.out.print(" , discount= ");
 					String a=dborder.get(i).discount+"";
 					String b=dborder.get(i).price+"";
-					logger.info(a);
-					logger.info(" , price= ");
-					logger.info(b);
-					logger.info(" , received date= ");
+					System.out.print(a);
+					System.out.print(" , price= ");
+					System.out.print(b);
+					System.out.print(" , received date= ");
 					String c=dborder.get(i).lateDate+"";
-					logger.info(c);
-					logger.info(" , days left= ");
+					System.out.print(c);
+					System.out.print(" , days left= ");
 					String d=dborder.get(i).timeReceipt+"";
-					logger.info(d);
-					logger.info(" , count= ");
+					System.out.print(d);
+					System.out.print(" , count= ");
 					String e=dborder.get(i).count+"";
-					logger.info(e);
+					System.out.print(e);
 					return true;
 				}
 				
 			}
-			logger.info("There is no order with this number to request its information.");
+			System.out.print("There is no order with this number to request its information.");
 			return false;
 		}
 		
@@ -624,23 +624,23 @@ List <String> pass=new ArrayList <String>();
 
 			for(int i=0;i<dbitem.size();i++ ) {
 				if(dbitem.get(i).name.equals(name)) {
-					logger.info("item's SN: ");
-					logger.info(dbitem.get(i).sn);
-					logger.info("item's Name: ");
-					logger.info(dbitem.get(i).name);
-					logger.info("item's description: ");
-					logger.info(dbitem.get(i).description);
-					logger.info("item's price: ");
+					System.out.print("item's SN: ");
+					System.out.print(dbitem.get(i).sn);
+					System.out.print("item's Name: ");
+					System.out.print(dbitem.get(i).name);
+					System.out.print("item's description: ");
+					System.out.print(dbitem.get(i).description);
+					System.out.print("item's price: ");
 					String jj=""+dbitem.get(i).price;
-					logger.info(jj);
-					logger.info("item's Category: ");
-					logger.info(dbitem.get(i).category);
+					System.out.print(jj);
+					System.out.print("item's Category: ");
+					System.out.print(dbitem.get(i).category);
 					 
 				 
 					return true;
 				}
 			}
-			logger.info("there is an item with this name.");
+			System.out.print("there is an item with this name.");
 			return false;
 			
 		}
@@ -708,10 +708,10 @@ List <String> pass=new ArrayList <String>();
 				en+=dbuser.get(i).point;
 			}
 			finalInc=en-count;
-			logger.info("Final Income :");
+			System.out.print("Final Income :");
 			String j=finalInc+"";
-			logger.info(j);
-			logger.info("$");
+			System.out.print(j);
+			System.out.print("$");
 			return true;
 		}
 		 
@@ -719,27 +719,27 @@ List <String> pass=new ArrayList <String>();
 		public boolean showAllOrder() {
 			for(int i=0;i<dborder.size();i++) {
 		 
-				logger.info("id= ");
-				logger.info(dborder.get(i).idorder);
-				logger.info(" | id user= ");
-				logger.info(dborder.get(i).id);
-				logger.info(" | type of order= ");
-				logger.info(dborder.get(i).name);
-				logger.info(" | discount= ");
+				System.out.print("id= ");
+				System.out.print(dborder.get(i).idorder);
+				System.out.print(" | id user= ");
+				System.out.print(dborder.get(i).id);
+				System.out.print(" | type of order= ");
+				System.out.print(dborder.get(i).name);
+				System.out.print(" | discount= ");
 				String a=""+dborder.get(i).discount;
 				String b=""+dborder.get(i).price;
 				String c=""+dborder.get(i).lateDate;
 				String d=""+dborder.get(i).timeReceipt;		
-				logger.info(a);
-				logger.info(" | price= ");
-				logger.info(b);
-				logger.info(" | received date= ");
-				logger.info(c);
-				logger.info(" | days left= ");
-				logger.info(d);
-				logger.info(" | count= ");
+				System.out.print(a);
+				System.out.print(" | price= ");
+				System.out.print(b);
+				System.out.print(" | received date= ");
+				System.out.print(c);
+				System.out.print(" | days left= ");
+				System.out.print(d);
+				System.out.print(" | count= ");
 				
-				logger.info("\n");
+				System.out.print("\n");
 			}
 			return true;
 		}
@@ -747,19 +747,19 @@ List <String> pass=new ArrayList <String>();
 		public boolean showAllApartments() {
 			for(int i=0;i<dbapartment.size();i++) {
 		 
-				logger.info("sn :");
-				logger.info(dbapartment.get(i).sn);
-				logger.info(" | location :");
-				logger.info(dbapartment.get(i).location);
-				logger.info(" | capacity : ");
-				logger.info (dbapartment.get(i).capacity);
-				logger.info(" | description : ");
-				logger.info (dbapartment.get(i).description);
-				logger.info(" | price : ");
+				System.out.print("sn :");
+				System.out.print(dbapartment.get(i).sn);
+				System.out.print(" | location :");
+				System.out.print(dbapartment.get(i).location);
+				System.out.print(" | capacity : ");
+				System.out.print (dbapartment.get(i).capacity);
+				System.out.print(" | description : ");
+				System.out.print (dbapartment.get(i).description);
+				System.out.print(" | price : ");
 				String b=""+dbapartment.get(i).price;
-				logger.info(b);
+				System.out.print(b);
 			
-				logger.info("\n");
+				System.out.print("\n");
 			}
 			return true;
 		}
@@ -768,9 +768,9 @@ List <String> pass=new ArrayList <String>();
 		public boolean dept() {
 			for (int i=0;i<dborder.size();i++) {
 				if(dborder.get(i).timeReceipt<=2&&!dborder.get(i).paid) {
-					logger.info("The amount of dept owed by users: ");
+					System.out.print("The amount of dept owed by users: ");
 					String hh=""+dborder.get(i).price;
-					logger.info(hh);
+					System.out.print(hh);
 					States.deptamount=dborder.get(i).price;
 					
 				}
