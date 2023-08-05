@@ -70,11 +70,10 @@ static void menuadmin()
 	logger.info("|   press 3 if you want to delete your item from the Sakancom Application.                    | \n");
 	logger.info("|   press 4 if you want to request the company's income.                                      | \n");
 	logger.info("|   press 5 if you want to show all orders in the company.                                    | \n");
-	logger.info("|   press 6 if you want to view unpaid orderes.                                               | \n");
-	logger.info("|   press 7 if you want to search for user.                                                   | \n");
-	logger.info("|   press 8 if you want to search for item.                                                   | \n");
-	logger.info("|   press 9 if you want to log out                                                            | \n");
-	logger.info("|   press 10 if you want to go to main page                                                   | \n");
+	logger.info("|   press 6 if you want to search for user.                                                   | \n");
+	logger.info("|   press 7 if you want to search for item.                                                   | \n");
+	logger.info("|   press 8 if you want to log out                                                            | \n");
+	logger.info("|   press 9 if you want to go to main page                                                   | \n");
 
 }
 
@@ -253,16 +252,7 @@ db.showAllOrder();
 break;
 }
 
-
 case 6:
-{
-db.dept();
-break;
-}
-
-
-
-case 7:
 {Scanner s8=new Scanner(System.in);
 
 String namuser;
@@ -274,7 +264,7 @@ db.searchuser(namuser);
 break;
 
 }
-case 8:
+case 7:
 {
 Scanner s9=new Scanner(System.in);
 String namPRO;
@@ -288,14 +278,14 @@ break;
 
 }
 
-case 9:
+case 8:
 {
 	choice();
 	break;
 }
 
 
-case 10:
+case 9:
 {
 	admin();
 break ;

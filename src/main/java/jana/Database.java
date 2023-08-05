@@ -768,18 +768,7 @@ List <String> pass=new ArrayList <String>();
 		}
 		
 		
-		public boolean dept() {
-			for (int i=0;i<dborder.size();i++) {
-				if(dborder.get(i).timeReceipt<=2&&!dborder.get(i).paid) {
-					logger.info("The amount of dept owed by users: ");
-					String hh=""+dborder.get(i).price;
-					logger.info(hh);
-					States.deptamount=dborder.get(i).price;
-					
-				}
-			}
-					return true;
-				}
+		
 
 		public void makepaidtrue(String id) {
 			for(int i=0;i<dborder.size();i++)
