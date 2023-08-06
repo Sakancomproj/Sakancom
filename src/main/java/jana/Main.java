@@ -713,7 +713,6 @@ account ();
 	
 	default :
 		logger.info("your entery is wrong!");
-	break;
 	
 }
 
