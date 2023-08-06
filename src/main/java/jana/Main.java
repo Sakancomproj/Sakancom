@@ -649,7 +649,7 @@ account ();
 	logger.info("Do you want to continue? (Enter '1' to continue, any other number to exit): ");
     int continueChoice = s.nextInt();
     keepRunning = (continueChoice == 1);
-	
+	break;
 	}
 	
 	case 2: 
