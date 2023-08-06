@@ -1,4 +1,4 @@
-/*package jana;
+package jana;
 
 import java.util.Scanner;
 import java.util.logging.Logger;
@@ -959,4 +959,4 @@ static void test(int ch8)
 		
 	}
 
-}*/
+}
