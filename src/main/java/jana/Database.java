@@ -491,37 +491,7 @@ List <String> pass=new ArrayList <String>();
 			
 			return null;
 		}
-		
-	 public String calcbalance(String id)
-		{
-		 String ret="";
-		
-		 for(int i=0;i<dbowner.size();i++) {
-				if( dbowner.get(i).id.equals(id) ){
-					
-					
-				int x=200;
-				dbowner.get(i).balance= Integer.toString(x);
-		        dbowner.get(i).balance=ret;
-
-				}
-				
-				
-			}
 		 
-			
-			return ret;
-				
-			}
-	 
-	public Order ret(String iduser,String idorder) {
-		for(int i=0;i<dborder.size();i++) {
-			if(dborder.get(i).id.equals(iduser)&& dborder.get(i).idorder.equals(idorder)) {
-				return dborder.get(i);
-			}
-		}
-	return	 null;
-	}
 		public boolean cancleorder(String iduser, String idord) {
 			
 			 for(int k=0;k<dborder.size();k++) {
@@ -539,9 +509,6 @@ List <String> pass=new ArrayList <String>();
 						logger.info(dborder.get(i).id);
 						logger.info(" , type of order= ");
 							logger.info(dborder.get(i).name);
-						logger.info(" , discount= ");
-						String n=dborder.get(i).discount+"";
-						logger.info(n);
 						logger.info(" , price= ");
 						String h=dborder.get(i).price+"";
 						logger.info(h);
@@ -767,17 +734,7 @@ List <String> pass=new ArrayList <String>();
 			return true;
 		}
 		
-		
-		
-
-		public void makepaidtrue(String id) {
-			for(int i=0;i<dborder.size();i++)
-			{
-				if(dborder.get(i).idorder.equals(id)) {
-					dborder.get(i).paid=true;
-				}
-			}
-		}
+	
 		
 		public String returnid2(String email,String pass) {
 			for(int i=0;i<dbuser.size();i++) {

@@ -13,7 +13,6 @@ public class Main {
 	  static Database db=new Database();
 	  static User u=new User();
 	  static Order o=new Order();
-	  static States sta=new States ();
 	  static Owner own =new Owner ();
 	  
 	  static	int m;
@@ -419,7 +418,8 @@ account ();
   
   
 	case 1:
-	{boolean existing=false;
+	{
+		boolean existing=false;
 	logger.info(" \n enter your id:");
 	
 	id1=scan.nextLine();
@@ -433,7 +433,6 @@ account ();
 		logger.info(" enter your new information: \n");
 		logger.info(" enter new name: ");	
   	name1=scan.nextLine();
-  	  scan.nextLine();
   	  logger.info(" enter new address: ");
   	address1=scan.nextLine();		
   	logger.info(" enter new phone: ");	
@@ -510,7 +509,6 @@ account ();
 		logger.info(sas1);
 	       	
       idorder=scan.nextLine();
-        scan.nextLine();
       
         logger.info(" enter your type: "); 
   		 type=scan.nextLine();
@@ -558,10 +556,10 @@ account ();
 	case 6:
 		
 	{
-		Scanner san=new Scanner(System.in);
+		Scanner scan=new Scanner(System.in);
 		
 		logger.info(" enter your id of order :");
-		idorder=san.nextLine();
+		idorder=scan.nextLine();
        
 		
 		db.cancleorder(iduser,idorder);
@@ -574,11 +572,11 @@ account ();
 	
 	case 7:
 	{
-		Scanner sca = new Scanner(System.in);
+		Scanner scan = new Scanner(System.in);
 
 		logger.info(" enter your id of order. : ");
 		
-		idorder=sca.nextLine();
+		idorder=scan.nextLine();
        
 		db.infoorder(iduser,idorder );
 		
@@ -604,7 +602,6 @@ account ();
 		}
 		if(com) 
 		{
-		o=db.ret(iduser, idorder);
 		
 		for(int i=0;i<db.dbuser.size();i++) {
 			if(db.dbuser.get(i).id.equals(iduser)) {
@@ -637,6 +634,7 @@ account ();
 		break;
 	
   }
+  
   logger.info("Do you want to continue? (Enter '1' to continue, any other number to exit): ");
   int continueChoice = s.nextInt();
   keepRunning = (continueChoice == 1);
@@ -872,7 +870,7 @@ case 4:
 {
 	sn2();
 
-	logger.info("This apartment has been reserved by ahmad Successfully");
+	logger.info("This apartment has been reserved by the user Ahmad Successfully \n");
 
 break ;
 }

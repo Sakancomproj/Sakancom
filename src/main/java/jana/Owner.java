@@ -10,7 +10,7 @@ String idorder;
 	 String password;
 	 String phone;
 	 String balance ;
-static boolean logowner=false;
+static boolean logowner=true;
 
 public static int checkifexi8(String string1, String string2) {
 	
