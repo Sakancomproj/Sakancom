@@ -367,16 +367,27 @@ List <String> pass=new ArrayList <String>();
 			logger.info("Your information has been modified ,this is your new information:");
 			for(int i=0;i< dbuser.size();i++ ) {
 				if(dbuser.get(i).id.equals(id2)){
-					logger.info("name: ");
-					logger.info(dbuser.get(i).name);
-					logger.info(" phone:");
-					logger.info(dbuser.get(i).phone);
-					logger.info(" email:");
-					logger.info(dbuser.get(i).email);
-					logger.info(" address:");
-					logger.info(dbuser.get(i).address);
-					logger.info(" password:");
-					logger.info(dbuser.get(i).password);
+					
+					if(dbuser.get(i).name != null){
+						logger.info(" name:");
+						logger.info(dbuser.get(i).name);
+						}
+					if(dbuser.get(i).email != null){
+						logger.info(" email:");
+						logger.info(dbuser.get(i).email);
+						}
+					if(dbuser.get(i).phone != null){
+						logger.info(" phone:");
+						logger.info(dbuser.get(i).phone);
+						}
+					if(dbuser.get(i).address != null){
+						logger.info("address:");
+						logger.info(dbuser.get(i).address);
+						}
+					if(dbuser.get(i).password != null){
+						logger.info(" password:");
+						logger.info(dbuser.get(i).password);
+						}
 					
 				}}	 
 			
