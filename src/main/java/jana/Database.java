@@ -368,9 +368,9 @@ List <String> pass=new ArrayList <String>();
 			for(int i=0;i< dbuser.size();i++ ) {
 				if(dbuser.get(i).id.equals(id2)){
 					
-					String pass = dbuser.get(i).password;
+					String pas = dbuser.get(i).password;
 					if (password != null){
-				    logger.info(pass);
+				    logger.info(pas);
 					}
 					
 					String nam = dbuser.get(i).name;
@@ -388,9 +388,10 @@ List <String> pass=new ArrayList <String>();
 				    logger.info(em);
 					}
 					
-					
-					logger.info(" address:");
-					logger.info(dbuser.get(i).address);
+					String addr = dbuser.get(i).address;
+					if (adders!= null){
+				    logger.info(addr);
+					}
 					
 					
 				}}	 
