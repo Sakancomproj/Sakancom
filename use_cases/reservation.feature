@@ -42,3 +42,8 @@ Scenario: Receipt of the reservation and the payment
 Given that the user with number "2" wants to receive his reservation with No. "3" was in a state of ready.
 When   the user with number "2" requests to receive his reservation number "3" and pay his debt
 Then the application received and the debt was paid
+
+Scenario: delete apartment by sn
+Given that the owner with email "deema@gmail.com" wants to delete his apartment 
+And the apartment with sn "3"
+Then the apartment with sn "3" is actually deleted

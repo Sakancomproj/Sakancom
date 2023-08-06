@@ -16,6 +16,8 @@ public class reservation_steps {
 	//boolean log=false,neworder=false,cancel=false;	
 	Reservation ord=new Reservation();	
 	Database db=new Database();
+	boolean flag_email;
+	boolean delete;
 	
 @Given("that The user submits a new reservation in his bag and  he is already registered in the application")
 public void thatTheUserSubmitsANewReservationInHisBagAndHeIsAlreadyRegisteredInTheApplication() {
@@ -153,6 +155,24 @@ public void theUserWithNumberRequestsToReceiveHisReservationNumberAndPayHisDebt(
 @Then("the application received and the debt was paid")
 public void theApplicationWasReceivedAndTheDebtWasPaid() {
 	//assertFalse(ready);
+}
+
+@Given("that the owner with email {string} wants to delete his apartment")
+public void thatTheOwnerWithEmailWantsToDeleteHisApartment(String email2) {
+	delete =false;
+
+	 flag_email=db.checkemail(email2);
+}
+
+@Given("the apartment with sn {string}")
+public void theApartmentWithSn(String sn) {
+	db.deleteapartment(sn);
+	delete =true;
+}
+
+@Then("the apartment with sn {string} is actually deleted")
+public void theApartmentWithSnIsActuallyDeleted(String string) {
+	assertTrue(delete);
 }
 
 }

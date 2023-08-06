@@ -17,7 +17,9 @@ List <String> pass=new ArrayList <String>();
 	 List <Item> dbitem=new ArrayList <Item> ();
 	 List <Owner> dbowner=new ArrayList <Owner> ();
 	 List <Apartment> dbapartment=new ArrayList <Apartment> ();
+	 
 	 private static final Logger logger = Logger.getLogger(Database.class.getName());
+	 
 	 User obj1=new User();
 	 User obj2=new User();
 	 Item obj3=new Item();

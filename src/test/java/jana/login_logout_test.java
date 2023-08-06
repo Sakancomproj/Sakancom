@@ -13,6 +13,10 @@ public class login_logout_test {
 	 static User user1;
 	
 	static boolean flag_login;
+	boolean flag_email;
+	boolean delete;
+
+	Database db= new Database();
 
 	public login_logout_test(Admin adm1,User user2) {
 		adm=adm1;
@@ -147,6 +151,26 @@ public void the_user_logs_out() {
 public void the_user_is_logged_out() {
 	 assertTrue(!flag_user);
 }
+
+@Given("that the user with email {string} wants to delete his account")
+public void thatTheUserWithEmailWantsToDeleteHisAccount(String email2) {
+	delete =false;
+
+	 flag_email=db.checkemail(email2);
+}
+
+@Given("the user with id {string}")
+public void theUserWithId(String id) {
+	db.deleteuser(id);
+	delete =true;
+}
+
+@Then("the user with id {string} is actually deleted")
+public void theUserWithIdIsActuallyDeleted(String string) {
+	assertTrue(delete);
+	assertTrue(flag_email);
+}
+
 }
 
 

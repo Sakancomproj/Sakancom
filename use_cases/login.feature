@@ -44,3 +44,8 @@ Description: The admin and user login and logout  to the system
 		Given that the user is logged in
 		When the user logs out
 		Then the user is logged out
+		
+Scenario: delete user by id 
+Given that the user with email "ahmad@gmail.com" wants to delete his account 
+And the user with id "3"
+Then the user with id "3" is actually deleted
