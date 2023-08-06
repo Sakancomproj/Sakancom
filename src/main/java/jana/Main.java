@@ -952,7 +952,7 @@ static void test(int ch8)
 		
 		test(choice1);
 		
-		System.out.println("Do you want to continue? (Enter '1' to continue, any other number to exit): ");
+		logger.info("Do you want to continue? (Enter '1' to continue, any other number to exit): ");
         int continueChoice = sh.nextInt();
         keepRunning = (continueChoice == 1);
 		}
