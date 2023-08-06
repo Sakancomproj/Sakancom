@@ -368,26 +368,30 @@ List <String> pass=new ArrayList <String>();
 			for(int i=0;i< dbuser.size();i++ ) {
 				if(dbuser.get(i).id.equals(id2)){
 					
-					if(dbuser.get(i).name != null){
-						logger.info(" name:");
-						logger.info(dbuser.get(i).name);
-						}
-					if(dbuser.get(i).email != null){
-						logger.info(" email:");
-						logger.info(dbuser.get(i).email);
-						}
-					if(dbuser.get(i).phone != null){
-						logger.info(" phone:");
-						logger.info(dbuser.get(i).phone);
-						}
-					if(dbuser.get(i).address != null){
-						logger.info("address:");
-						logger.info(dbuser.get(i).address);
-						}
-					if(dbuser.get(i).password != null){
-						logger.info(" password:");
-						logger.info(dbuser.get(i).password);
-						}
+					String pass = dbuser.get(i).password;
+					if (password != null){
+				    logger.info(pass);
+					}
+					
+					String nam = dbuser.get(i).name;
+					if (name != null){
+				    logger.info(nam);
+					}
+					
+					String ph = dbuser.get(i).phone;
+					if (phone != null){
+				    logger.info(ph);
+					}
+					
+					String em = dbuser.get(i).email;
+					if (email != null){
+				    logger.info(em);
+					}
+					
+					
+					logger.info(" address:");
+					logger.info(dbuser.get(i).address);
+					
 					
 				}}	 
 			
