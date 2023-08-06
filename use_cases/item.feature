@@ -22,7 +22,7 @@ And  the item with SN "2" , Category "Furniture" ,name "Sofa",picture "pic2.jpg"
 Then the item with SN "2" is update 
 
 @testsearch
-Scenario: search item by Serial Number 
+Scenario: search item by name 
 Given that the user with email "ahmad@gmail.com" wants to search item 
-And the item with SN "2"
-Then the item with SN "2" is searched
+And the item with name "Sofa"
+Then the item with name "Sofa" is searched

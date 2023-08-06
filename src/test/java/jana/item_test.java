@@ -94,21 +94,20 @@ public class item_test {
 	}
 	boolean search;
 	@Given("that the user with email {string} wants to search item")
-	public void that_the_user_with_email_want_to_search_item(String email2) {
+	public void thatTheUserWithEmailWantsToSearchItem(String string) {
 		search =false;
-		 flag_email=db.checkemail(email2);
-	   
-	   
+
+		 flag_email=db.checkemail(string);
 	}
-	
-	@And("that the user searched item with SN {string}")
-	/*public void that_the_user_searched_item_with_sn(String sn) {
-		db.searchitem(sn);
-		search=true;
-	}*/
-	@Then("the item with SN {string} is searched")
-	public void theItemWithSNIsSearched(String string) {
-		//assertTrue(search);
-		//assertTrue(flag_email);
+
+	@Given("the item with name {string}")
+	public void theItemWithName(String string) {
+		db.searchitem(string);
+		search =true;
+	}
+
+	@Then("the item with name {string} is searched")
+	public void theItemWithNameIsSearched(String string) {
+		assertTrue(search);
 	}
 }
