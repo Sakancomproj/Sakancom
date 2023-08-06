@@ -368,29 +368,37 @@ List <String> pass=new ArrayList <String>();
 			for(int i=0;i< dbuser.size();i++ ) {
 				if(dbuser.get(i).id.equals(id2)){
 					
-					String pas = dbuser.get(i).password;
-					if (password != null){
-				    logger.info(pas);
-					}
 					
+					
+					logger.info("name: ");
 					String nam = dbuser.get(i).name;
 					if (name != null){
 				    logger.info(nam);
 					}
 					
+					logger.info("address: ");
+					String addr = dbuser.get(i).address;
+					if (addr!= null){
+				    logger.info(addr);
+					}
+					
+					logger.info("phone: ");
 					String ph = dbuser.get(i).phone;
-					if (phone != null){
+					if (ph != null){
 				    logger.info(ph);
 					}
 					
+					logger.info("email: ");
 					String em = dbuser.get(i).email;
-					if (email != null){
+					if (em != null){
 				    logger.info(em);
 					}
 					
-					String addr = dbuser.get(i).address;
-					if (adders!= null){
-				    logger.info(addr);
+					
+					logger.info("password: ");
+					String pas = dbuser.get(i).password;
+					if (pas != null){
+				    logger.info(pas);
 					}
 					
 					
@@ -404,16 +412,39 @@ List <String> pass=new ArrayList <String>();
 		{
 			for(int i=0;i<dbuser.size();i++ ) {
 				if(dbuser.get(i).name.equals(nameuser)) {
+					
+
 					logger.info("user's id: ");
-					logger.info(dbuser.get(i).id);
+					String id = dbuser.get(i).id;
+					if (id != null){
+				    logger.info(id);
+					}
+					
 					logger.info("user's Name: ");
-					logger.info(dbuser.get(i).name);
+					String nam = dbuser.get(i).name;
+					if (nam != null){
+				    logger.info(nam);
+					}
+					
+					
 					logger.info("user's Address: ");
-					logger.info(dbuser.get(i).address);
+					String adr = dbuser.get(i).address;
+					if (adr != null){
+				    logger.info(adr);
+					}
+					
 					logger.info("user's Email: ");
-					logger.info(dbuser.get(i).email);
+					String em = dbuser.get(i).email;
+					if (em != null){
+				    logger.info(em);
+					}
+					
 					logger.info("user's Phone: ");
-					logger.info(dbuser.get(i).phone);
+					String ph = dbuser.get(i).phone;
+					if (ph != null){
+				    logger.info(ph);
+					}
+					
 					logger.info("user's Point: ");
 					String oo=dbuser.get(i).point+"";
 					logger.info(oo);
@@ -614,16 +645,33 @@ List <String> pass=new ArrayList <String>();
 			for(int i=0;i<dbitem.size();i++ ) {
 				if(dbitem.get(i).name.equals(name)) {
 					logger.info("item's SN: ");
-					logger.info(dbitem.get(i).sn);
+					
+					String sn = dbitem.get(i).sn;
+					if (sn!= null){
+				    logger.info(sn);
+					}
+					
 					logger.info("item's Name: ");
-					logger.info(dbitem.get(i).name);
+					
+					String nam = dbitem.get(i).name;
+					if (nam!= null){
+				    logger.info(nam);
+					}
 					logger.info("item's description: ");
-					logger.info(dbitem.get(i).description);
+					
+					String desc = dbitem.get(i).description;
+					if (desc!= null){
+				    logger.info(desc);
+					}
+					
 					logger.info("item's price: ");
 					String jj=""+dbitem.get(i).price;
 					logger.info(jj);
 					logger.info("item's Category: ");
-					logger.info(dbitem.get(i).category);
+					String cat = dbitem.get(i).category;
+					if (cat!= null){
+				    logger.info(cat);
+					}
 					 
 				 
 					return true;
