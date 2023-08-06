@@ -631,7 +631,6 @@ account ();
 	
 	default :
 		logger.info("The enter is wrong!");
-		break;
 	
   }
   
