@@ -582,12 +582,20 @@ account ();
   			 if ( db.dborder.get(i).id.equals(iduser)&&db.dborder.get(i).idorder.equals(idorder))
   				{
 				 logger.info("id= ");
-  				
-			 logger.info(db.dborder.get(i).idorder);
+				 String idor = db.dborder.get(i).idorder;
+					if (idor != null){
+				    logger.info(idor);
+					}
 			 logger.info(" , id user= ");
-			 logger.info(db.dborder.get(i).id);
+			 String idr = db.dborder.get(i).id;
+				if (idr != null){
+			    logger.info(idr);
+				}
 			 logger.info(" , type of order= ");
-			 logger.info(db.dborder.get(i).name);
+			 String namas = db.dborder.get(i).name;
+				if (namas != null){
+			    logger.info(namas);
+				}
 			 logger.info(" , discount= "); 
 			 String s0 ="" +db.dborder.get(i).discount;
 			 logger.info(s0); 
