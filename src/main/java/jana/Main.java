@@ -249,11 +249,26 @@ db.deleteitem(sn);
 for (int i=0 ;i <db.dbitem.size();i++)
 {
 
-	logger.info(db.dbitem.get(i).sn);
-	logger.info(db.dbitem.get(i).category);
-	logger.info(db.dbitem.get(i).description);
-	logger.info(db.dbitem.get(i).name);
-	logger.info(db.dbitem.get(i).picture);
+	String n = db.dbitem.get(i).sn;
+	if (n != null){
+	    logger.info(n);
+		}
+	String cat = db.dbitem.get(i).category;
+	if (cat != null){
+	    logger.info(cat);
+		}
+	String de = db.dbitem.get(i).description;
+	if (de != null){
+	    logger.info(de);
+		}
+	String mn = db.dbitem.get(i).name;
+	if (mn != null){
+	    logger.info(mn);
+		}
+	String pi = db.dbitem.get(i).picture;
+	if (pi != null){
+	    logger.info(pi);
+		}
 	logger.info("\n");
 }
 break;
@@ -500,12 +515,30 @@ account ();
 		for (int i=0 ;i <db.dbuser.size();i++)
 		{
 
-			logger.info(db.dbuser.get(i).id);
-			logger.info(db.dbuser.get(i).phone);
-			logger.info(db.dbuser.get(i).email);
-			logger.info(db.dbuser.get(i).name);
-			logger.info(db.dbuser.get(i).password);
-			logger.info(db.dbuser.get(i).address);
+			String id = db.dbuser.get(i).id;
+			if (id!= null){
+		    logger.info(id);
+			}
+			String ph = db.dbuser.get(i).phone;
+			if (ph != null){
+		    logger.info(ph);
+			}
+			String em = db.dbuser.get(i).email;
+			if (em != null){
+		    logger.info(em);
+			}
+			String nam = db.dbuser.get(i).name;
+			if (name != null){
+		    logger.info(nam);
+			}
+			String pas = db.dbuser.get(i).password;
+			if (pas != null){
+		    logger.info(pas);
+			}
+			String ad = db.dbuser.get(i).address;
+			if (ad!= null){
+		    logger.info(ad);
+			}
 			logger.info("\n");
 		
 	 	}
