@@ -163,30 +163,15 @@ if (s1.nextInt()==1)
 for (int i=0 ;i < db.dbitem.size();i++)
 {
 logger.info(spa);
-String l = db.dbitem.get(i).sn;
-if (l != null){
-    logger.info(l);
-	}
+logger.info(db.dbitem.get(i).sn);
 	logger.info(spa);
-	String na = db.dbitem.get(i).name;
-	if (na != null){
-	    logger.info(na);
-		}
+logger.info(db.dbitem.get(i).name);
 	logger.info(spa);
-	String ca = db.dbitem.get(i).category;
-	if (ca != null){
-	    logger.info(ca);
-		}
+logger.info(db.dbitem.get(i).category);
 	logger.info(spa);
-	String de = db.dbitem.get(i).description;
-	if (de != null){
-	    logger.info(de);
-		}
+logger.info(db.dbitem.get(i).description);
 logger.info(spa);
-String pic = db.dbitem.get(i).picture;
-if (pic != null){
-    logger.info(pic);
-	}
+logger.info(db.dbitem.get(i).picture);
 logger.info("\n");
 }
 }
@@ -216,22 +201,10 @@ db.updateitem(sn, category, name, picture, description);
 for (int i=0 ;i < db.dbitem.size();i++)
 {
 
-	String n = db.dbitem.get(i).sn;
-	if (n != null){
-	    logger.info(n);
-		}
-	String cat = db.dbitem.get(i).category;
-	if (cat != null){
-	    logger.info(cat);
-		}
-	String de = db.dbitem.get(i).description;
-	if (de != null){
-	    logger.info(de);
-		}
-	String mn = db.dbitem.get(i).name;
-	if (mn != null){
-	    logger.info(mn);
-		}
+logger.info(db.dbitem.get(i).sn);
+logger.info(db.dbitem.get(i).category);
+logger.info(db.dbitem.get(i).description);
+	logger.info(db.dbitem.get(i).name);
 	logger.info("\n");
 	
 }
@@ -249,26 +222,11 @@ db.deleteitem(sn);
 for (int i=0 ;i <db.dbitem.size();i++)
 {
 
-	String n = db.dbitem.get(i).sn;
-	if (n != null){
-	    logger.info(n);
-		}
-	String cat = db.dbitem.get(i).category;
-	if (cat != null){
-	    logger.info(cat);
-		}
-	String de = db.dbitem.get(i).description;
-	if (de != null){
-	    logger.info(de);
-		}
-	String mn = db.dbitem.get(i).name;
-	if (mn != null){
-	    logger.info(mn);
-		}
-	String pi = db.dbitem.get(i).picture;
-	if (pi != null){
-	    logger.info(pi);
-		}
+	logger.info(db.dbitem.get(i).sn);
+	logger.info(db.dbitem.get(i).category);
+	logger.info(db.dbitem.get(i).description);
+	logger.info(db.dbitem.get(i).name);
+	logger.info(db.dbitem.get(i).picture);
 	logger.info("\n");
 }
 break;
@@ -518,6 +476,7 @@ account ();
 			logger.info(db.dbuser.get(i).id);
 			logger.info(db.dbuser.get(i).phone);
 			logger.info(db.dbuser.get(i).email);
+			logger.info(db.dbuser.get(i).name);
 			logger.info(db.dbuser.get(i).password);
 			logger.info(db.dbuser.get(i).address);
 			logger.info("\n");
