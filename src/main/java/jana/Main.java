@@ -854,15 +854,30 @@ if (s7.nextInt()==1)
 for (int i=0 ;i < db.dbapartment.size();i++)
 {
 logger.info(sma);
-logger.info(db.dbapartment.get(i).sn);
+String san = db.dbapartment.get(i).sn;
+if (san != null){
+logger.info(san);
+}
 	logger.info(sma);
-logger.info(db.dbapartment.get(i).capacity);
+	String capaci = db.dbapartment.get(i).capacity;
+	if (capaci != null){
+	logger.info(capaci);
+	}
 	logger.info(sma);
-logger.info(db.dbapartment.get(i).location);
+	String lpo = db.dbapartment.get(i).location;
+	if (lpo != null){
+	logger.info(lpo);
+	}
 	logger.info(sma);
-logger.info(db.dbapartment.get(i).description);
+	String descript = db.dbapartment.get(i).description;
+	if (descript != null){
+	logger.info(descript);
+	}
 	logger.info(sma);
-logger.info(db.dbapartment.get(i).picture);
+	String pict = db.dbapartment.get(i).picture;
+	if (pict != null){
+	logger.info(pict);
+	}
 	logger.info("\n");
 }
 }
