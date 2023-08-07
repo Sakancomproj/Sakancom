@@ -239,6 +239,8 @@ break;
 
 }
 
+
+
 case 3:
 {
 logger.info("please enter the SN of your item\n");
