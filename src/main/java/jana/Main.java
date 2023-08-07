@@ -45,7 +45,8 @@ public class Main {
 	  static  String capacity;
 	  static String pic ;
 	  static String descrip;
-	 
+		 public static final String PASS_TYPE = "\n Your Password :";
+		 
 static void menuuser()
 { 
 	logger.info("*   press 1 if you want to modify your information in the Sakancom Application.               * \n");
@@ -115,7 +116,7 @@ int  adlogin =0;
 			logger.info("\n Your email :");
 	email=s1.next();
 	
-	logger.info("\n Your Password :");
+	logger.info(PASS_TYPE);
 	password=s1.next();
 	
 	
@@ -424,7 +425,7 @@ account ();
 			logger.info("\n Your email :");
 	email=s.next();
 	
-	logger.info("\n Your Password :");
+	logger.info(PASS_TYPE);
 	password=s.next();
 	userlog=db.checkemail(email)&&db.checkpass(password);
 	String iduser=db.returnid2(email,password);
@@ -805,7 +806,7 @@ int owlogin = 0;
 			logger.info("\n Your Email :");
 	email=s7.next();
 	
-	logger.info("\n Your Password :");
+	logger.info(PASS_TYPE);
 	password=s7.next();
 	
 	
