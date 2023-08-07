@@ -620,11 +620,20 @@ List <String> pass=new ArrayList <String>();
 				if(dborder.get(i).id.equals(iduser)&&dborder.get(i).idorder.equals(id)) {
 				
 					logger.info("id= ");
-					logger.info(dborder.get(i).idorder);
+					String r = dborder.get(i).idorder;
+					if (r != null){
+					    logger.info(r);
+						}
 					logger.info(" , id user= ");
-					logger.info(dborder.get(i).id);
+					String f = dborder.get(i).id;
+					if (f != null){
+					    logger.info(f);
+						}
 					logger.info(" , type of order= ");
-					logger.info(dborder.get(i).name);
+					String ma = dborder.get(i).name;
+					if (ma != null){
+					    logger.info(ma);
+						}
 					logger.info(" , discount= ");
 					String a=dborder.get(i).discount+"";
 					String b=dborder.get(i).price+"";
