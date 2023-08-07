@@ -250,11 +250,26 @@ db.deleteitem(sn);
 for (int i=0 ;i <db.dbitem.size();i++)
 {
 
-	logger.info(db.dbitem.get(i).sn);
-	logger.info(db.dbitem.get(i).category);
-	logger.info(db.dbitem.get(i).description);
-	logger.info(db.dbitem.get(i).name);
-	logger.info(db.dbitem.get(i).picture);
+	String sin = db.dbitem.get(i).sn;
+	if (sin != null){
+    logger.info(sin);
+	}
+	String catego = db.dbitem.get(i).category;
+	if (catego != null){
+    logger.info(catego);
+	}
+	String de = db.dbitem.get(i).description;
+	if (de != null){
+    logger.info(de);
+	}
+	String namen = db.dbitem.get(i).name;
+	if (namen != null){
+    logger.info(namen);
+	}
+	String pictur = db.dbitem.get(i).picture;
+	if (pictur != null){
+    logger.info(pictur);
+	}
 	logger.info("\n");
 }
 break;
