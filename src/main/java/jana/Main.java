@@ -764,8 +764,10 @@ account ();
 	 
 	 for (int i=0 ;i <db.dbuser.size();i++)
 	{
-		
-		 logger.info(db.dbuser.get(i).name);
+		 String nameusr = db.dbuser.get(i).name;
+			if (nameusr != null){
+		    logger.info(nameusr);
+			}
 		 logger.info("\n");
 	}
 		
