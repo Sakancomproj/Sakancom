@@ -925,12 +925,26 @@ sn=s7.next();
 db.deleteapartment(sn);
 for (int i=0 ;i <db.dbapartment.size();i++)
 {
-
-	logger.info(db.dbapartment.get(i).sn);
-	logger.info(db.dbapartment.get(i).location);
-	logger.info(db.dbapartment.get(i).description);
-	logger.info(db.dbapartment.get(i).capacity);
-	logger.info(db.dbapartment.get(i).picture);
+	String cos = db.dbapartment.get(i).sn;
+	if (cos != null){
+    logger.info(cos);
+	}
+	String lo = db.dbapartment.get(i).location;
+	if (lo != null){
+    logger.info(lo);
+	}
+	String descf = db.dbapartment.get(i).description;
+	if (descf != null){
+    logger.info(descf);
+	}
+	String capactt = db.dbapartment.get(i).capacity;
+	if (capactt != null){
+    logger.info(capactt);
+	}
+	String pictr = db.dbapartment.get(i).picture;
+	if (pictr != null){
+    logger.info(pictr);
+	}
 	logger.info("\n");
 }
 break;
