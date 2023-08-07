@@ -554,11 +554,20 @@ List <String> pass=new ArrayList <String>();
 					for(int i=0;i<dborder.size();i++) {
 		    			 
 						logger.info("id= ");
-						logger.info(dborder.get(i).idorder);
+						String or = dborder.get(i).idorder;
+						if (or != null){
+					    logger.info(or);
+						}
 					logger.info(" , id user= ");
-						logger.info(dborder.get(i).id);
+					String orr = dborder.get(i).id;
+					if (orr != null){
+				    logger.info(orr);
+					}
 						logger.info(" , type of order= ");
-							logger.info(dborder.get(i).name);
+						String n = dborder.get(i).name;
+						if (n != null){
+					    logger.info(n);
+						}
 						logger.info(" , price= ");
 						String h=dborder.get(i).price+"";
 						logger.info(h);
@@ -757,11 +766,20 @@ List <String> pass=new ArrayList <String>();
 			for(int i=0;i<dborder.size();i++) {
 		 
 				logger.info("id= ");
-				logger.info(dborder.get(i).idorder);
+				String or = dborder.get(i).idorder;
+				if (or != null){
+				    logger.info(or);
+					}
 				logger.info(" | id user= ");
-				logger.info(dborder.get(i).id);
+				String aa = dborder.get(i).id;
+				if (aa != null){
+			    logger.info(aa);
+				}
 				logger.info(" | type of order= ");
-				logger.info(dborder.get(i).name);
+				String man = dborder.get(i).name;
+				if (man != null){
+			    logger.info(man);
+				}
 				logger.info(" | discount= ");
 				String a=""+dborder.get(i).discount;
 				String b=""+dborder.get(i).price;
@@ -785,13 +803,25 @@ List <String> pass=new ArrayList <String>();
 			for(int i=0;i<dbapartment.size();i++) {
 		 
 				logger.info("sn :");
-				logger.info(dbapartment.get(i).sn);
+				String s = dbapartment.get(i).sn;
+				if ( s!= null){
+			    logger.info(s);
+				}
 				logger.info(" | location :");
-				logger.info(dbapartment.get(i).location);
+				String loc = dbapartment.get(i).location;
+				if ( loc!= null){
+			    logger.info(loc);
+				}
 				logger.info(" | capacity : ");
-				logger.info (dbapartment.get(i).capacity);
+				String cap = dbapartment.get(i).capacity;
+				if ( cap!= null){
+			    logger.info(cap);
+				}
 				logger.info(" | description : ");
-				logger.info (dbapartment.get(i).description);
+				String desc = dbapartment.get(i).description;
+				if ( desc!= null){
+			    logger.info(desc);
+				}
 				logger.info(" | price : ");
 				String b=""+dbapartment.get(i).price;
 				logger.info(b);
