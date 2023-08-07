@@ -163,15 +163,30 @@ if (s1.nextInt()==1)
 for (int i=0 ;i < db.dbitem.size();i++)
 {
 logger.info(spa);
-logger.info(db.dbitem.get(i).sn);
+String l = db.dbitem.get(i).sn;
+if (l != null){
+    logger.info(l);
+	}
 	logger.info(spa);
-logger.info(db.dbitem.get(i).name);
+	String na = db.dbitem.get(i).name;
+	if (na != null){
+	    logger.info(na);
+		}
 	logger.info(spa);
-logger.info(db.dbitem.get(i).category);
+	String ca = db.dbitem.get(i).category;
+	if (ca != null){
+	    logger.info(ca);
+		}
 	logger.info(spa);
-logger.info(db.dbitem.get(i).description);
+	String de = db.dbitem.get(i).description;
+	if (de != null){
+	    logger.info(de);
+		}
 logger.info(spa);
-logger.info(db.dbitem.get(i).picture);
+String pic = db.dbitem.get(i).picture;
+if (pic != null){
+    logger.info(pic);
+	}
 logger.info("\n");
 }
 }
@@ -201,10 +216,22 @@ db.updateitem(sn, category, name, picture, description);
 for (int i=0 ;i < db.dbitem.size();i++)
 {
 
-logger.info(db.dbitem.get(i).sn);
-logger.info(db.dbitem.get(i).category);
-logger.info(db.dbitem.get(i).description);
-	logger.info(db.dbitem.get(i).name);
+	String n = db.dbitem.get(i).sn;
+	if (n != null){
+	    logger.info(n);
+		}
+	String cat = db.dbitem.get(i).category;
+	if (cat != null){
+	    logger.info(cat);
+		}
+	String de = db.dbitem.get(i).description;
+	if (de != null){
+	    logger.info(de);
+		}
+	String mn = db.dbitem.get(i).name;
+	if (mn != null){
+	    logger.info(mn);
+		}
 	logger.info("\n");
 	
 }
