@@ -519,25 +519,25 @@ account ();
 			if (id!= null){
 		    logger.info(id);
 			}
-			String ph = db.dbuser.get(i).phone;
-			if (ph != null){
-		    logger.info(ph);
+			String pho = db.dbuser.get(i).phone;
+			if (pho != null){
+		    logger.info(pho);
 			}
-			String em = db.dbuser.get(i).email;
-			if (em != null){
-		    logger.info(em);
+			String emai = db.dbuser.get(i).email;
+			if (emai != null){
+		    logger.info(emai);
 			}
-			String nam = db.dbuser.get(i).name;
-			if (name != null){
-		    logger.info(nam);
+			String nanm = db.dbuser.get(i).name;
+			if (nanm != null){
+		    logger.info(nanm);
 			}
-			String pas = db.dbuser.get(i).password;
-			if (pas != null){
-		    logger.info(pas);
+			String hh = db.dbuser.get(i).password;
+			if (hh != null){
+		    logger.info(hh);
 			}
-			String ad = db.dbuser.get(i).address;
-			if (ad!= null){
-		    logger.info(ad);
+			String addre = db.dbuser.get(i).address;
+			if (addre!= null){
+		    logger.info(addre);
 			}
 			logger.info("\n");
 		
