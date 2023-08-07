@@ -515,13 +515,30 @@ account ();
 		db.deleteuser(iduser);
 		for (int i=0 ;i <db.dbuser.size();i++)
 		{
-
-			logger.info(db.dbuser.get(i).id);
-			logger.info(db.dbuser.get(i).phone);
-			logger.info(db.dbuser.get(i).email);
-			logger.info(db.dbuser.get(i).name);
-			logger.info(db.dbuser.get(i).password);
-			logger.info(db.dbuser.get(i).address);
+			String ide = db.dbuser.get(i).id;
+			if (ide != null){
+		    logger.info(ide);
+			}
+			String phones = db.dbuser.get(i).phone;
+			if (phones != null){
+		    logger.info(phones);
+			}
+			String emaile = db.dbuser.get(i).email;
+			if (emaile != null){
+		    logger.info(emaile);
+			}
+			String nama = db.dbuser.get(i).name;
+			if (nama != null){
+		    logger.info(nama);
+			}
+			String passwo = db.dbuser.get(i).password;
+			if (passwo != null){
+		    logger.info(passwo);
+			}
+			String addrres = db.dbuser.get(i).address;
+			if (addrres != null){
+		    logger.info(addrres);
+			}
 			logger.info("\n");
 		
 	 	}
