@@ -239,8 +239,6 @@ break;
 
 }
 
-
-
 case 3:
 {
 logger.info("please enter the SN of your item\n");
@@ -517,30 +515,11 @@ account ();
 		for (int i=0 ;i <db.dbuser.size();i++)
 		{
 
-			String id = db.dbuser.get(i).id;
-			if (id!= null){
-		    logger.info(id);
-			}
-			String pho = db.dbuser.get(i).phone;
-			if (pho != null){
-		    logger.info(pho);
-			}
-			String emai = db.dbuser.get(i).email;
-			if (emai != null){
-		    logger.info(emai);
-			}
-			String nanm = db.dbuser.get(i).name;
-			if (nanm != null){
-		    logger.info(nanm);
-			}
-			String hh = db.dbuser.get(i).password;
-			if (hh != null){
-		    logger.info(hh);
-			}
-			String addre = db.dbuser.get(i).address;
-			if (addre!= null){
-		    logger.info(addre);
-			}
+			logger.info(db.dbuser.get(i).id);
+			logger.info(db.dbuser.get(i).phone);
+			logger.info(db.dbuser.get(i).email);
+			logger.info(db.dbuser.get(i).password);
+			logger.info(db.dbuser.get(i).address);
 			logger.info("\n");
 		
 	 	}
